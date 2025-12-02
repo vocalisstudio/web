@@ -1,686 +1,203 @@
-<!DOCTYPE html>
-<html lang="ja">
+<!doctype html>
+<html lang="ja" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Vocalis Studio - あなたの歌声を磨く、本格的なボーカルトレーニングアプリ">
-    <title>Vocalis Studio - ボーカルトレーニングアプリ</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary-color: #007AFF;
-            --secondary-color: #5856D6;
-            --text-primary: #1C1C1E;
-            --text-secondary: #8E8E93;
-            --background: #FFFFFF;
-            --surface: #F2F2F7;
-            --border: #E5E5EA;
-            --gradient: linear-gradient(135deg, #007AFF 0%, #5856D6 100%);
-        }
-
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --text-primary: #FFFFFF;
-                --text-secondary: #98989D;
-                --background: #000000;
-                --surface: #1C1C1E;
-                --border: #38383A;
-            }
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-            background: var(--background);
-            color: var(--text-primary);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        /* Header */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--border);
-            z-index: 1000;
-            padding: 1rem 0;
-        }
-
-        @media (prefers-color-scheme: dark) {
-            header {
-                background: rgba(0, 0, 0, 0.8);
-            }
-        }
-
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 600;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        /* Hero Section */
-        .hero {
-            margin-top: 80px;
-            padding: 4rem 2rem;
-            text-align: center;
-            background: var(--gradient);
-            color: white;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            letter-spacing: -0.02em;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            opacity: 0.9;
-            margin-bottom: 2rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            background: white;
-            color: var(--primary-color);
-            border-radius: 12px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        /* How It Works Section */
-        .how-it-works {
-            padding: 5rem 2rem;
-            background: var(--background);
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-        }
-
-        .section-description {
-            text-align: center;
-            font-size: 1.125rem;
-            color: var(--text-secondary);
-            max-width: 800px;
-            margin: 0 auto 4rem;
-            line-height: 1.8;
-        }
-
-        .steps {
-            display: flex;
-            flex-direction: column;
-            gap: 4rem;
-        }
-
-        .step {
-            display: grid;
-            grid-template-columns: auto 1fr;
-            gap: 2rem;
-            align-items: start;
-        }
-
-        .step-number {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: var(--gradient);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 700;
-            flex-shrink: 0;
-        }
-
-        .step-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .screenshot-placeholder {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .phone-frame {
-            width: 280px;
-            height: 560px;
-            border: 12px solid #1C1C1E;
-            border-radius: 40px;
-            background: var(--surface);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .phone-frame::before {
-            content: '';
-            position: absolute;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 25px;
-            background: #1C1C1E;
-            border-radius: 0 0 20px 20px;
-        }
-
-        .phone-content {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-            padding: 2rem;
-            text-align: center;
-            color: var(--text-secondary);
-        }
-
-        .phone-content p {
-            font-weight: 600;
-            color: var(--text-primary);
-        }
-
-        .phone-content span {
-            font-size: 0.875rem;
-        }
-
-        .step-content h3 {
-            font-size: 1.75rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        .step-content p {
-            color: var(--text-secondary);
-            line-height: 1.8;
-            font-size: 1.0625rem;
-        }
-
-        /* Features Section */
-        .features {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 5rem 2rem;
-            background: var(--surface);
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .feature-card {
-            background: var(--surface);
-            border-radius: 20px;
-            padding: 2rem;
-            transition: transform 0.3s;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .feature-card h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .feature-card p {
-            color: var(--text-secondary);
-            line-height: 1.8;
-        }
-
-        /* Use Cases Section */
-        .use-cases {
-            padding: 5rem 2rem;
-            background: var(--background);
-        }
-
-        .use-case-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .use-case-card {
-            background: var(--surface);
-            border-radius: 20px;
-            padding: 2.5rem;
-            transition: transform 0.3s;
-        }
-
-        .use-case-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .use-case-card h3 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        .use-case-card p {
-            color: var(--text-secondary);
-            line-height: 1.8;
-        }
-
-        /* Pricing Section */
-        .pricing {
-            background: var(--surface);
-            padding: 5rem 2rem;
-        }
-
-        .pricing-container {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .pricing-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .pricing-card {
-            background: var(--background);
-            border-radius: 20px;
-            padding: 2.5rem;
-            border: 2px solid var(--border);
-            transition: all 0.3s;
-        }
-
-        .pricing-card.featured {
-            border-color: var(--primary-color);
-            transform: scale(1.05);
-            box-shadow: 0 20px 40px rgba(0, 122, 255, 0.2);
-        }
-
-        .pricing-card:hover {
-            border-color: var(--primary-color);
-        }
-
-        .pricing-badge {
-            background: var(--gradient);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            display: inline-block;
-            margin-bottom: 1rem;
-        }
-
-        .pricing-title {
-            font-size: 1.75rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .pricing-price {
-            font-size: 3rem;
-            font-weight: 700;
-            margin: 1rem 0;
-        }
-
-        .pricing-price span {
-            font-size: 1.25rem;
-            color: var(--text-secondary);
-        }
-
-        .pricing-features {
-            list-style: none;
-            margin: 2rem 0;
-        }
-
-        .pricing-features li {
-            padding: 0.75rem 0;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .pricing-features li::before {
-            content: "✓";
-            color: var(--primary-color);
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        .pricing-button {
-            width: 100%;
-            padding: 1rem;
-            background: var(--gradient);
-            color: white;
-            border: none;
-            border-radius: 12px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-
-        .pricing-button:hover {
-            transform: translateY(-2px);
-        }
-
-        .pricing-button.secondary {
-            background: var(--surface);
-            color: var(--text-primary);
-        }
-
-        /* Footer */
-        footer {
-            background: var(--surface);
-            padding: 3rem 2rem;
-            text-align: center;
-            border-top: 1px solid var(--border);
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .footer-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .footer-links a:hover {
-            color: var(--primary-color);
-        }
-
-        .copyright {
-            color: var(--text-secondary);
-            font-size: 0.875rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .section-description {
-                font-size: 1rem;
-            }
-
-            .step {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .step-number {
-                margin: 0 auto;
-            }
-
-            .step-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .phone-frame {
-                width: 240px;
-                height: 480px;
-            }
-
-            .step-content h3 {
-                font-size: 1.5rem;
-            }
-
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .use-case-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .pricing-card.featured {
-                transform: none;
-            }
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vocalis Studio – ボイストレーニング録音・分析アプリ</title>
+  <meta name="description" content="スケール再生と同時録音。リアルタイムのピッチ検出とスペクトログラム分析で、歌声をデータで理解するiOSアプリ。" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{ --accent:#2B7DB3; --accent-ink:#0C3550; --cta:#F0B300; }
+    html,body{ font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, "Segoe UI", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif; }
+    .card{ box-shadow: 0 10px 30px rgba(0,0,0,.06), 0 2px 8px rgba(0,0,0,.05); }
+    .glass{ backdrop-filter: saturate(180%) blur(20px); background: rgba(255,255,255,.72); }
+    .device{ border: 10px solid #111; border-bottom-width: 18px; border-radius: 28px; box-shadow: 0 20px 60px rgba(0,0,0,.15); }
+    .eyebrow{ letter-spacing:.08em; font-weight:600; color: #64748b; }
+    .badge{ border:1px solid rgba(0,0,0,.08); }
+  </style>
 </head>
-<body>
-    <header>
-        <nav>
-            <div class="logo">🎵 Vocalis Studio</div>
-        </nav>
-    </header>
+<body class="bg-white text-slate-900">
+  <header class="sticky top-0 z-40 bg-white/80 glass border-b border-slate-200/60">
+    <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+      <a href="#" class="group inline-flex items-center gap-3">
+        <div class="h-8 w-8 rounded-xl bg-[color:var(--accent)] flex items-center justify-center text-white font-bold">V</div>
+        <span class="font-semibold tracking-tight text-slate-800 group-hover:text-slate-900">Vocalis Studio</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-7 text-sm text-slate-700">
+        <a href="#features" class="hover:text-slate-900">機能</a>
+        <a href="#screens" class="hover:text-slate-900">画面</a>
+        <a href="#pricing" class="hover:text-slate-900">プラン</a>
+        <a href="#tech" class="hover:text-slate-900">仕様</a>
+      </nav>
+      <a href="#" class="rounded-full bg-[color:var(--accent)] px-4 py-2 text-white text-sm font-medium shadow hover:opacity-95 active:opacity-90">App Store</a>
+    </div>
+  </header>
 
-    <section class="hero">
-        <h1>iPhoneで、本格的なボーカルトレーニング</h1>
-        <p>音階に合わせて歌いながら録音。あなたの音程を可視化して、歌唱力を向上させるiOSアプリです。</p>
-        <a href="#how-it-works" class="cta-button">使い方を見る</a>
-    </section>
-
-    <section class="how-it-works" id="how-it-works">
-        <div class="container">
-            <h2 class="section-title">Vocalis Studioとは？</h2>
-            <p class="section-description">
-                Vocalis Studioは、スケール（音階）を再生しながら同時に録音できるボーカルトレーニングアプリです。<br>
-                ドレミファソラシドの音階に合わせて歌い、あなたの音程がどれくらい正確かをリアルタイムで確認できます。
-            </p>
-
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <div class="screenshot-placeholder">
-                            <div class="phone-frame">
-                                <div class="phone-content">
-                                    <p>スケール選択画面</p>
-                                    <span>ここにスクリーンショット</span>
-                                </div>
-                            </div>
-                        </div>
-                        <h3>スケールを選ぶ</h3>
-                        <p>5音階から13音階まで、様々なスケールパターンから選択。初心者は5音階から始めるのがおすすめです。</p>
-                    </div>
-                </div>
-
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <div class="screenshot-placeholder">
-                            <div class="phone-frame">
-                                <div class="phone-content">
-                                    <p>録音画面</p>
-                                    <span>ここにスクリーンショット</span>
-                                </div>
-                            </div>
-                        </div>
-                        <h3>音階に合わせて歌う</h3>
-                        <p>アプリが音階を再生するので、それに合わせて声を出します。画面には現在の音程がリアルタイムで表示されます。</p>
-                    </div>
-                </div>
-
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <div class="screenshot-placeholder">
-                            <div class="phone-frame">
-                                <div class="phone-content">
-                                    <p>分析画面</p>
-                                    <span>ここにスクリーンショット</span>
-                                </div>
-                            </div>
-                        </div>
-                        <h3>音程を確認する</h3>
-                        <p>録音後、目標の音程とあなたの実際の音程を比較。どの音が外れていたか、一目でわかります。</p>
-                    </div>
-                </div>
-            </div>
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-white via-white to-slate-50"></div>
+    <div class="relative mx-auto max-w-6xl px-4 pt-16 pb-14">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="eyebrow mb-3">ボイストレーニング録音・分析アプリ</p>
+          <h1 class="text-4xl md:text-5xl font-semibold tracking-tight leading-tight text-slate-900">
+            歌声を、<span class="text-[color:var(--accent-ink)]">データ</span>で理解する。
+          </h1>
+          <p class="mt-6 text-lg leading-7 text-slate-700">
+            スケール再生に合わせて録音し、リアルタイムでピッチを可視化。Vocalis Studioは、ボイストレーナーと学習者のためのシンプルで正確な練習ツールです。
+          </p>
+          <div class="mt-8 flex items-center gap-3">
+            <a href="#" class="inline-flex items-center gap-2 rounded-full bg-[color:var(--accent)] px-5 py-3 text-white font-medium shadow hover:opacity-95">App Store</a>
+            <a href="#features" class="inline-flex items-center gap-2 rounded-full border border-slate-300 px-5 py-3 text-slate-800 hover:bg-slate-50">機能を見る</a>
+          </div>
+          <div class="mt-6 flex items-center gap-3 text-sm text-slate-600">
+            <span class="badge rounded-full px-3 py-1">iOS 15.0+ 対応</span>
+            <span class="badge rounded-full px-3 py-1">8言語ローカライズ</span>
+            <span class="badge rounded-full px-3 py-1">StoreKit 2</span>
+          </div>
         </div>
-    </section>
-
-    <section class="features">
-        <h2 class="section-title">主な機能</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">🎼</div>
-                <h3>スケール練習機能</h3>
-                <p>5トーンスケール、オクターブリピート、またはスケールなしから選択。テンポや上昇回数も調整可能です。</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">📊</div>
-                <h3>リアルタイム音程表示</h3>
-                <p>歌っている最中も、録音後も、あなたの音程を視覚的に確認できます。</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🎤</div>
-                <h3>スケール再生+同時録音</h3>
-                <p>音階を聴きながら録音できるから、正しい音程で歌う練習ができます。</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">💾</div>
-                <h3>練習履歴の保存</h3>
-                <p>過去の録音を保存して、上達の記録を振り返ることができます。</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">⚙️</div>
-                <h3>音量・感度調整</h3>
-                <p>再生音量、録音感度を自分の環境に合わせて細かく調整できます。</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🌙</div>
-                <h3>ダークモード対応</h3>
-                <p>目に優しいダークモードで、夜間の練習も快適です。</p>
-            </div>
+        <div class="md:justify-self-end">
+          <img src="images/01_home.png" alt="Home screen" class="device w-[320px] mx-auto md:mx-0" />
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section class="use-cases">
-        <div class="container">
-            <h2 class="section-title">こんな方におすすめ</h2>
-            <div class="use-case-grid">
-                <div class="use-case-card">
-                    <h3>🎵 歌が上手くなりたい</h3>
-                    <p>カラオケで音程が外れてしまう...そんな悩みを解決。毎日の練習で音程感覚が身につきます。</p>
-                </div>
-                <div class="use-case-card">
-                    <h3>🎙️ ボイトレ教室に通えない</h3>
-                    <p>時間やお金の都合で教室に通えなくても、アプリがあれば自宅で本格的な練習ができます。</p>
-                </div>
-                <div class="use-case-card">
-                    <h3>📈 上達を記録したい</h3>
-                    <p>練習の記録を残して、自分の成長を実感。モチベーション維持にも役立ちます。</p>
-                </div>
-            </div>
+  <section id="features" class="relative py-16 md:py-24 bg-white">
+    <div class="mx-auto max-w-6xl px-4">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="card rounded-3xl p-8">
+          <h3 class="text-xl font-semibold">録音 × スケール再生</h3>
+          <p class="mt-3 text-slate-700">設定したスケールパターンに合わせて自動再生と録音を開始。カウントダウン後にシームレスに練習へ。</p>
+          <div class="mt-6">
+            <img src="images/02_recording_idle.png" alt="Recording idle" class="rounded-2xl border border-slate-200" />
+          </div>
         </div>
-    </section>
-
-    <section class="pricing" id="pricing">
-        <div class="pricing-container">
-            <h2 class="section-title">プラン</h2>
-            <div class="pricing-cards">
-                <div class="pricing-card">
-                    <div class="pricing-title">無料プラン</div>
-                    <div class="pricing-price">¥0<span>/月</span></div>
-                    <ul class="pricing-features">
-                        <li>1日5回まで録音</li>
-                        <li>1回30秒まで</li>
-                        <li>基本的なスケール練習</li>
-                        <li>音程分析機能</li>
-                    </ul>
-                    <button class="pricing-button secondary">無料で始める</button>
-                </div>
-
-                <div class="pricing-card featured">
-                    <div class="pricing-badge">おすすめ</div>
-                    <div class="pricing-title">プレミアム</div>
-                    <div class="pricing-price">¥500<span>/月</span></div>
-                    <ul class="pricing-features">
-                        <li>回数無制限で録音</li>
-                        <li>1回最大5分まで</li>
-                        <li>すべてのスケール練習</li>
-                        <li>高度な音程分析</li>
-                        <li>録音データの無制限保存</li>
-                        <li>広告なし</li>
-                    </ul>
-                    <button class="pricing-button">プレミアムに登録</button>
-                </div>
-            </div>
+        <div class="card rounded-3xl p-8">
+          <h3 class="text-xl font-semibold">リアルタイム解析</h3>
+          <p class="mt-3 text-slate-700">スペクトルとピッチインジケーターで、音量と音程の変化を即時に可視化。セント単位のズレ表示にも対応。</p>
+          <div class="mt-6">
+            <img src="images/02_recording_in_progress.png" alt="Recording in progress" class="rounded-2xl border border-slate-200" />
+          </div>
         </div>
-    </section>
-
-    <footer>
-        <div class="footer-links">
-            <a href="terms.html">利用規約</a>
-            <a href="privacy.html">プライバシーポリシー</a>
+        <div class="card rounded-3xl p-8">
+          <h3 class="text-xl font-semibold">設定の柔軟性</h3>
+          <p class="mt-3 text-slate-700">スケール種類、開始ピッチ、テンポ、進行パターン、上下行の回数と間隔を調整可能。</p>
+          <div class="mt-6">
+            <img src="images/02_recording_complete.png" alt="Scale settings" class="rounded-2xl border border-slate-200" />
+          </div>
         </div>
-        <p class="copyright">&copy; 2024 Vocalis Studio. All rights reserved.</p>
-    </footer>
+      </div>
+    </div>
+  </section>
+
+  <section id="screens" class="py-16 md:py-24 bg-slate-50">
+    <div class="mx-auto max-w-6xl px-4">
+      <div class="mb-10 text-center">
+        <p class="eyebrow">SCREENSHOTS</p>
+        <h2 class="mt-2 text-3xl md:text-4xl font-semibold tracking-tight">練習の流れを、UIそのままに。</h2>
+        <p class="mt-3 text-slate-700">録音 → 一覧 → 分析まで、迷わない導線で設計。</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="card rounded-3xl p-6 bg-white">
+          <h3 class="text-lg font-semibold">録音一覧</h3>
+          <p class="mt-2 text-slate-700">日時・キー・スケール情報つきで自動整理。選択してすぐ再生・分析へ。</p>
+          <img src="images/03_recording_list_idle.png" alt="Recording list" class="mt-4 rounded-2xl border border-slate-200" />
+          <img src="images/03_recording_list_playback.png" alt="Recording list playback" class="mt-4 rounded-2xl border border-slate-200" />
+        </div>
+        <div class="card rounded-3xl p-6 bg-white">
+          <h3 class="text-lg font-semibold">録音分析</h3>
+          <p class="mt-2 text-slate-700">スペクトログラムとピッチグラフで、目標スケールと検出ピッチの差を確認。</p>
+          <img src="images/04_analysis_idle.png" alt="Analysis view" class="mt-4 rounded-2xl border border-slate-200" />
+          <img src="images/04_analysis_playback.png" alt="Analysis playback" class="mt-4 rounded-2xl border border-slate-200" />
+        </div>
+      </div>
+      <div class="card rounded-3xl p-6 bg-white mt-8">
+        <h3 class="text-lg font-semibold">設定</h3>
+        <p class="mt-2 text-slate-700">サブスクリプション管理、入出力設定、言語切替、バージョン表示、規約リンク。</p>
+        <img src="images/05_settings.png" alt="Settings" class="mt-4 rounded-2xl border border-slate-200" />
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="py-16 md:py-24 bg-white">
+    <div class="mx-auto max-w-6xl px-4">
+      <div class="mb-10 text-center">
+        <p class="eyebrow">PLAN</p>
+        <h2 class="mt-2 text-3xl md:text-4xl font-semibold tracking-tight">プラン</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="card rounded-3xl p-8">
+          <h3 class="text-xl font-semibold">Free</h3>
+          <p class="mt-2 text-slate-700">基本機能</p>
+          <ul class="mt-4 space-y-2 text-slate-700">
+            <li>・基本録音</li>
+            <li>・リアルタイムピッチ検出</li>
+            <li>・5音スケール再生</li>
+            <li>・録音制限: 1日5回 / 最大30秒</li>
+          </ul>
+        </div>
+        <div class="card rounded-3xl p-8 border border-[color:var(--accent)]">
+          <div class="inline-flex items-center gap-2 rounded-full bg-[color:var(--accent)]/10 px-3 py-1 text-[color:var(--accent-ink)] text-sm">おすすめ</div>
+          <h3 class="mt-3 text-xl font-semibold">Premium</h3>
+          <p class="mt-2 text-slate-700">拡張機能</p>
+          <ul class="mt-4 space-y-2 text-slate-700">
+            <li>・無制限録音（最大5分）</li>
+            <li>・スペクトル可視化</li>
+            <li>・ピッチ正確度分析</li>
+            <li>・ピッチ推移グラフ</li>
+            <li>・カスタムスケール</li>
+            <li>・練習履歴</li>
+            <li>・WAVエクスポート</li>
+          </ul>
+        </div>
+      </div>
+      <div class="text-center mt-10">
+        <a href="#" class="inline-flex items-center gap-2 rounded-full bg-[color:var(--accent)] px-6 py-3 text-white font-medium shadow hover:opacity-95">App Storeで入手</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="tech" class="py-16 md:py-24 bg-slate-50">
+    <div class="mx-auto max-w-6xl px-4">
+      <div class="mb-10 text-center">
+        <p class="eyebrow">SPEC</p>
+        <h2 class="mt-2 text-3xl md:text-4xl font-semibold tracking-tight">技術仕様</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8 text-slate-700">
+        <div class="card rounded-3xl p-8 bg-white">
+          <h4 class="font-semibold">対応環境</h4>
+          <ul class="mt-3 space-y-1">
+            <li>・iOS 15.0 以上</li>
+            <li>・言語: Swift 5.9+</li>
+            <li>・UI: SwiftUI</li>
+          </ul>
+        </div>
+        <div class="card rounded-3xl p-8 bg-white">
+          <h4 class="font-semibold">オーディオ</h4>
+          <ul class="mt-3 space-y-1">
+            <li>・録音: M4A (AAC), 44.1kHz, モノラル</li>
+            <li>・解析: AVFoundation FFT</li>
+          </ul>
+        </div>
+        <div class="card rounded-3xl p-8 bg-white">
+          <h4 class="font-semibold">その他</h4>
+          <ul class="mt-3 space-y-1">
+            <li>・8言語ローカライズ</li>
+            <li>・StoreKit 2によるサブスクリプション管理</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-12 bg-white border-t border-slate-200/60">
+    <div class="mx-auto max-w-6xl px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-sm text-slate-600">© Vocalis Studio</p>
+      <div class="flex items-center gap-6 text-sm">
+        <a href="#" class="text-slate-700 hover:text-slate-900">利用規約</a>
+        <a href="#" class="text-slate-700 hover:text-slate-900">プライバシーポリシー</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
