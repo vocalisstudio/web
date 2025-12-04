@@ -25,10 +25,14 @@ web/
 ├── sns/               # SNS運用（非公開）
 │   ├── strategy.md    # 運用方針
 │   ├── calendar.md    # 投稿スケジュール
-│   ├── posts/         # 投稿アーカイブ
-│   │   └── YYYY/MM/   # 年月別
-│   ├── templates/     # 投稿テンプレート
-│   └── assets/        # SNS用素材
+│   ├── templates/     # 共通テンプレート
+│   ├── x/             # X（Twitter）
+│   │   ├── posts/     # 投稿アーカイブ
+│   │   └── assets/    # X用素材
+│   ├── instagram/     # Instagram
+│   │   ├── posts/     # 投稿アーカイブ
+│   │   └── assets/    # Instagram用素材
+│   └── shared/        # 共通素材（ロゴ等）
 │
 └── spec/              # アプリ仕様書
 ```
