@@ -27,12 +27,22 @@ web/
 │   ├── calendar.md    # 投稿スケジュール
 │   ├── templates/     # 共通テンプレート
 │   ├── x/             # X（Twitter）
-│   │   ├── posts/     # 投稿アーカイブ
-│   │   └── assets/    # X用素材
+│   │   ├── posts/YYYY/MM/
+│   │   │   ├── ja/    # 日本語投稿
+│   │   │   └── en/    # 英語投稿
+│   │   └── assets/images/
+│   │       ├── ja/    # 日本語用画像
+│   │       └── en/    # 英語用画像
 │   ├── instagram/     # Instagram
-│   │   ├── posts/     # 投稿アーカイブ
-│   │   └── assets/    # Instagram用素材
-│   └── shared/        # 共通素材（ロゴ等）
+│   │   ├── posts/YYYY/MM/
+│   │   │   ├── ja/    # 日本語投稿
+│   │   │   └── en/    # 英語投稿
+│   │   └── assets/images/
+│   │       ├── ja/    # 日本語用画像
+│   │       └── en/    # 英語用画像
+│   └── shared/images/ # 共通素材（ロゴ等）
+│       ├── ja/
+│       └── en/
 │
 └── spec/              # アプリ仕様書
 ```

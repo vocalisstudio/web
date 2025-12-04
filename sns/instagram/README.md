@@ -17,25 +17,40 @@
 
 ## 固定ハッシュタグ
 
+### 日本語
 ```
 #VocalisStudio #VoiceTrainingApp #ボイストレーニング
 ```
 
-## 追加ハッシュタグ候補
-
+### 追加候補（日本語）
 ```
 #音声分析 #ボイトレアプリ #AppUpdate #iOSアプリ
 #歌練習 #声楽 #ナレーション #ボーカルトレーニング
+```
+
+### English
+```
+#VocalisStudio #VoiceTrainingApp #VocalTraining
+```
+
+### Additional (English)
+```
+#VoiceAnalysis #SingingApp #AppUpdate #iOSApp
+#VocalPractice #SingingPractice #VoiceCoach
 ```
 
 ## ディレクトリ構成
 
 ```
 instagram/
-├── posts/           # 投稿アーカイブ
+├── posts/
 │   └── YYYY/MM/
+│       ├── ja/          # 日本語投稿
+│       └── en/          # 英語投稿
 └── assets/
-    └── images/      # Instagram用画像素材
+    └── images/
+        ├── ja/          # 日本語用画像
+        └── en/          # 英語用画像
 ```
 
 ## デザイン方針
@@ -44,3 +59,8 @@ instagram/
 - スクリーンショット中心
 - 余白を十分に取る
 - 統一感のあるテンプレート使用
+
+## App Store リンク
+
+- **日本語**: https://apps.apple.com/jp/app/vocalis-studio/id6755569862
+- **English**: https://apps.apple.com/us/app/vocalis-studio/id6755569862
