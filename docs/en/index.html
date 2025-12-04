@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vocalis Studio – Voice Training Recording & Analysis App</title>
+  <meta name="description" content="Record along with scale playback. Understand your voice through data with real-time pitch detection and spectrogram analysis. iOS app for voice training." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{ --accent:#2B7DB3; --accent-ink:#0C3550; --cta:#F0B300; }
+    html,body{ font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, "Segoe UI", sans-serif; }
+    .card{ box-shadow: 0 10px 30px rgba(0,0,0,.06), 0 2px 8px rgba(0,0,0,.05); }
+    .glass{ backdrop-filter: saturate(180%) blur(20px); background: rgba(255,255,255,.72); }
+    .device{ border: 10px solid #111; border-bottom-width: 18px; border-radius: 28px; box-shadow: 0 20px 60px rgba(0,0,0,.15); }
+    .eyebrow{ letter-spacing:.08em; font-weight:600; color: #64748b; }
+    .badge{ border:1px solid rgba(0,0,0,.08); }
+  </style>
+</head>
+<body class="bg-white text-slate-900">
+  <header class="sticky top-0 z-40 bg-white/80 glass border-b border-slate-200/60">
+    <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+      <a href="#" class="group inline-flex items-center gap-3">
+        <div class="h-8 w-8 rounded-xl bg-[color:var(--accent)] flex items-center justify-center text-white font-bold">V</div>
+        <span class="font-semibold tracking-tight text-slate-800 group-hover:text-slate-900">Vocalis Studio</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-7 text-sm text-slate-700">
+        <a href="#features" class="hover:text-slate-900">Features</a>
+        <a href="#screens" class="hover:text-slate-900">Screens</a>
+        <a href="#pricing" class="hover:text-slate-900">Plans</a>
+        <a href="#tech" class="hover:text-slate-900">Specs</a>
+      </nav>
+      <a href="https://apps.apple.com/us/app/vocalis-studio/id6755569862" class="rounded-full bg-[color:var(--accent)] px-4 py-2 text-white text-sm font-medium shadow hover:opacity-95 active:opacity-90">App Store</a>
+    </div>
+  </header>
+
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-white via-white to-slate-50"></div>
+    <div class="relative mx-auto max-w-6xl px-4 pt-16 pb-14">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="eyebrow mb-3">Voice Training Recording & Analysis App</p>
+          <h1 class="text-4xl md:text-5xl font-semibold tracking-tight leading-tight text-slate-900">
+            Understand your voice through <span class="text-[color:var(--accent-ink)]">data</span>.
+          </h1>
+          <p class="mt-6 text-lg leading-7 text-slate-700">
+            Record along with scale playback and visualize pitch in real-time. Vocalis Studio is a simple and accurate practice tool for voice trainers and learners.
+          </p>
+          <div class="mt-8 flex items-center gap-3">
+            <a href="https://apps.apple.com/us/app/vocalis-studio/id6755569862" class="inline-flex items-center gap-2 rounded-full bg-[color:var(--accent)] px-5 py-3 text-white font-medium shadow hover:opacity-95">App Store</a>
+            <a href="#features" class="inline-flex items-center gap-2 rounded-full border border-slate-300 px-5 py-3 text-slate-800 hover:bg-slate-50">View Features</a>
+          </div>
+          <div class="mt-6 flex items-center gap-3 text-sm text-slate-600">
+            <span class="badge rounded-full px-3 py-1">iOS 15.0+</span>
+            <span class="badge rounded-full px-3 py-1">Multi-language</span>
+            <span class="badge rounded-full px-3 py-1">StoreKit 2</span>
+          </div>
+        </div>
+        <div class="md:justify-self-end">
+          <img src="../images/en/01_home.png" alt="Home screen" class="device w-[320px] mx-auto md:mx-0" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="relative py-16 md:py-24 bg-white">
+    <div class="mx-auto max-w-6xl px-4">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="card rounded-3xl p-8">
+          <h3 class="text-xl font-semibold">Recording × Scale Playback</h3>
+          <p class="mt-3 text-slate-700">Auto-play and record along with your configured scale pattern. Seamlessly start practicing after a countdown.</p>
+          <div class="mt-6">
+            <img src="../images/en/02_recording_idle.png" alt="Recording idle screen" class="rounded-2xl border border-slate-200" />
+          </div>
+        </div>
+        <div class="card rounded-3xl p-8">
+          <h3 class="text-xl font-semibold">Real-time Analysis</h3>
+          <p class="mt-3 text-slate-700">Instantly visualize volume and pitch changes with spectrum and pitch indicator. Supports cent-level deviation display.</p>
+          <div class="mt-6">
+            <img src="../images/en/02_recording_in_progress.png" alt="Recording in progress" class="rounded-2xl border border-slate-200" />
+          </div>
+        </div>
+        <div class="card rounded-3xl p-8">
+          <h3 class="text-xl font-semibold">Flexible Settings</h3>
+          <p class="mt-3 text-slate-700">Adjust scale type, starting pitch, tempo, progression pattern, and ascending/descending count and intervals.</p>
+          <div class="mt-6">
+            <img src="../images/en/02_recording_complete.png" alt="Scale settings" class="rounded-2xl border border-slate-200" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="screens" class="py-16 md:py-24 bg-slate-50">
+    <div class="mx-auto max-w-6xl px-4">
+      <div class="mb-10 text-center">
+        <p class="eyebrow">SCREENSHOTS</p>
+        <h2 class="mt-2 text-3xl md:text-4xl font-semibold tracking-tight">Your practice flow, exactly as designed.</h2>
+        <p class="mt-3 text-slate-700">From recording to list to analysis — intuitive navigation throughout.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="card rounded-3xl p-6 bg-white">
+          <h3 class="text-lg font-semibold">Recording List</h3>
+          <p class="mt-2 text-slate-700">Auto-organized with date, key, and scale info. Select and play or analyze instantly.</p>
+          <img src="../images/en/03_recording_list_idle.png" alt="Recording list" class="mt-4 rounded-2xl border border-slate-200" />
+          <img src="../images/en/03_recording_list_playback.png" alt="Recording list playback" class="mt-4 rounded-2xl border border-slate-200" />
+        </div>
+        <div class="card rounded-3xl p-6 bg-white">
+          <h3 class="text-lg font-semibold">Recording Analysis</h3>
+          <p class="mt-2 text-slate-700">View the difference between target scale and detected pitch with spectrogram and pitch graph.</p>
+          <img src="../images/en/04_analysis_idle.png" alt="Analysis screen" class="mt-4 rounded-2xl border border-slate-200" />
+          <img src="../images/en/04_analysis_playback.png" alt="Analysis playback" class="mt-4 rounded-2xl border border-slate-200" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="py-16 md:py-24 bg-white">
+    <div class="mx-auto max-w-6xl px-4">
+      <div class="mb-10 text-center">
+        <p class="eyebrow">PLAN</p>
+        <h2 class="mt-2 text-3xl md:text-4xl font-semibold tracking-tight">Plans</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="card rounded-3xl p-8">
+          <h3 class="text-xl font-semibold">Free</h3>
+          <p class="mt-2 text-slate-700">Basic features</p>
+          <ul class="mt-4 space-y-2 text-slate-700">
+            <li>• Basic recording</li>
+            <li>• Real-time pitch detection</li>
+            <li>• 5-note scale playback</li>
+            <li>• Recording limit: 5 times/day, max 30 sec</li>
+          </ul>
+        </div>
+        <div class="card rounded-3xl p-8 border border-[color:var(--accent)]">
+          <div class="inline-flex items-center gap-2 rounded-full bg-[color:var(--accent)]/10 px-3 py-1 text-[color:var(--accent-ink)] text-sm">Recommended</div>
+          <h3 class="mt-3 text-xl font-semibold">Premium</h3>
+          <p class="mt-2 text-3xl font-bold text-slate-900">$4.99<span class="text-base font-normal text-slate-600">/month</span></p>
+          <p class="mt-1 text-sm text-slate-600">Auto-renewable subscription</p>
+          <ul class="mt-4 space-y-2 text-slate-700">
+            <li>• Unlimited recordings</li>
+            <li>• Recording time extended to 5 minutes</li>
+          </ul>
+          <p class="mt-4 text-xs text-slate-500">Subscription will be charged to your iTunes account. It auto-renews unless canceled at least 24 hours before the end of the current period.</p>
+        </div>
+      </div>
+      <div class="text-center mt-10">
+        <a href="https://apps.apple.com/us/app/vocalis-studio/id6755569862" class="inline-flex items-center gap-2 rounded-full bg-[color:var(--accent)] px-6 py-3 text-white font-medium shadow hover:opacity-95">Get on App Store</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="tech" class="py-16 md:py-24 bg-slate-50">
+    <div class="mx-auto max-w-6xl px-4">
+      <div class="mb-10 text-center">
+        <p class="eyebrow">SPEC</p>
+        <h2 class="mt-2 text-3xl md:text-4xl font-semibold tracking-tight">Technical Specifications</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8 text-slate-700">
+        <div class="card rounded-3xl p-8 bg-white">
+          <h4 class="font-semibold">Requirements</h4>
+          <ul class="mt-3 space-y-1">
+            <li>• iOS 15.0 or later</li>
+            <li>• Language: Swift 5.9+</li>
+            <li>• UI: SwiftUI</li>
+          </ul>
+        </div>
+        <div class="card rounded-3xl p-8 bg-white">
+          <h4 class="font-semibold">Audio</h4>
+          <ul class="mt-3 space-y-1">
+            <li>• Recording: M4A (AAC), 44.1kHz, Mono</li>
+            <li>• Analysis: AVFoundation FFT</li>
+          </ul>
+        </div>
+        <div class="card rounded-3xl p-8 bg-white">
+          <h4 class="font-semibold">Other</h4>
+          <ul class="mt-3 space-y-1">
+            <li>• Multi-language support</li>
+            <li>• Subscription via StoreKit 2</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-12 bg-white border-t border-slate-200/60">
+    <div class="mx-auto max-w-6xl px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-sm text-slate-600">© 2025 Kazu Asato</p>
+      <div class="flex items-center gap-6 text-sm">
+        <a href="../terms_en.html" class="text-slate-700 hover:text-slate-900">Terms of Use</a>
+        <a href="../privacy_en.html" class="text-slate-700 hover:text-slate-900">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
