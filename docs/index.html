@@ -5,6 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Vocalis Studio – ボイストレーニング録音・分析アプリ</title>
   <meta name="description" content="スケール再生と同時録音。リアルタイムのピッチ検出とスペクトログラム分析で、歌声をデータで理解するiOSアプリ。" />
+
+  <!-- SEO -->
+  <link rel="canonical" href="https://vocalisstudio.github.io/web/" />
+  <meta name="keywords" content="ボイストレーニング,歌,録音,ピッチ検出,音程,iOS,アプリ,スケール練習,声楽" />
+  <meta name="author" content="Kazu Asato" />
+  <link rel="alternate" hreflang="en" href="https://vocalisstudio.github.io/web/en/" />
+  <link rel="alternate" hreflang="ja" href="https://vocalisstudio.github.io/web/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Vocalis Studio – ボイストレーニング録音・分析アプリ" />
+  <meta property="og:description" content="スケール再生と同時録音。リアルタイムのピッチ検出とスペクトログラム分析で、歌声をデータで理解するiOSアプリ。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vocalisstudio.github.io/web/" />
+  <meta property="og:image" content="https://vocalisstudio.github.io/web/images/og-image.png" />
+  <meta property="og:locale" content="ja_JP" />
+  <meta property="og:site_name" content="Vocalis Studio" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Vocalis Studio – ボイストレーニング録音・分析アプリ" />
+  <meta name="twitter:description" content="スケール再生と同時録音。リアルタイムのピッチ検出とスペクトログラム分析で、歌声をデータで理解するiOSアプリ。" />
+  <meta name="twitter:image" content="https://vocalisstudio.github.io/web/images/og-image.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Vocalis Studio",
+    "operatingSystem": "iOS",
+    "applicationCategory": "MusicApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "JPY"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "ratingCount": "1"
+    },
+    "description": "スケール再生と同時録音。リアルタイムのピッチ検出とスペクトログラム分析で、歌声をデータで理解するiOSアプリ。",
+    "downloadUrl": "https://apps.apple.com/jp/app/vocalis-studio/id6755569862",
+    "softwareVersion": "1.1.0",
+    "author": {
+      "@type": "Person",
+      "name": "Kazu Asato"
+    }
+  }
+  </script>
+
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     :root{ --accent:#2B7DB3; --accent-ink:#0C3550; --cta:#F0B300; }
@@ -56,7 +112,7 @@
           </div>
         </div>
         <div class="md:justify-self-end">
-          <img src="images/01_home.png" alt="ホーム画面" class="device w-[320px] mx-auto md:mx-0" />
+          <img src="images/jp/01_home.png" alt="ホーム画面" class="device w-[320px] mx-auto md:mx-0" />
         </div>
       </div>
     </div>
@@ -69,21 +125,21 @@
           <h3 class="text-xl font-semibold">録音 × スケール再生</h3>
           <p class="mt-3 text-slate-700">設定したスケールパターンに合わせて自動再生と録音を開始。カウントダウン後にシームレスに練習へ。</p>
           <div class="mt-6">
-            <img src="images/02_recording_idle.png" alt="録音待機画面" class="rounded-2xl border border-slate-200" />
+            <img src="images/jp/02_recording_idle.png" alt="録音待機画面" class="rounded-2xl border border-slate-200" />
           </div>
         </div>
         <div class="card rounded-3xl p-8">
           <h3 class="text-xl font-semibold">リアルタイム解析</h3>
           <p class="mt-3 text-slate-700">スペクトルとピッチインジケーターで、音量と音程の変化を即時に可視化。セント単位のズレ表示にも対応。</p>
           <div class="mt-6">
-            <img src="images/02_recording_in_progress.png" alt="録音中画面" class="rounded-2xl border border-slate-200" />
+            <img src="images/jp/02_recording_in_progress.png" alt="録音中画面" class="rounded-2xl border border-slate-200" />
           </div>
         </div>
         <div class="card rounded-3xl p-8">
           <h3 class="text-xl font-semibold">設定の柔軟性</h3>
           <p class="mt-3 text-slate-700">スケール種類、開始ピッチ、テンポ、進行パターン、上下行の回数と間隔を調整可能。</p>
           <div class="mt-6">
-            <img src="images/02_recording_complete.png" alt="スケール設定" class="rounded-2xl border border-slate-200" />
+            <img src="images/jp/02_recording_complete.png" alt="スケール設定" class="rounded-2xl border border-slate-200" />
           </div>
         </div>
       </div>
@@ -101,14 +157,14 @@
         <div class="card rounded-3xl p-6 bg-white">
           <h3 class="text-lg font-semibold">録音一覧</h3>
           <p class="mt-2 text-slate-700">日時・キー・スケール情報つきで自動整理。選択してすぐ再生・分析へ。</p>
-          <img src="images/03_recording_list_idle.png" alt="録音一覧画面" class="mt-4 rounded-2xl border border-slate-200" />
-          <img src="images/03_recording_list_playback.png" alt="録音一覧再生中" class="mt-4 rounded-2xl border border-slate-200" />
+          <img src="images/jp/03_recording_list_idle.png" alt="録音一覧画面" class="mt-4 rounded-2xl border border-slate-200" />
+          <img src="images/jp/03_recording_list_playback.png" alt="録音一覧再生中" class="mt-4 rounded-2xl border border-slate-200" />
         </div>
         <div class="card rounded-3xl p-6 bg-white">
           <h3 class="text-lg font-semibold">録音分析</h3>
           <p class="mt-2 text-slate-700">スペクトログラムとピッチグラフで、目標スケールと検出ピッチの差を確認。</p>
-          <img src="images/04_analysis_idle.png" alt="分析画面" class="mt-4 rounded-2xl border border-slate-200" />
-          <img src="images/04_analysis_playback.png" alt="分析画面再生中" class="mt-4 rounded-2xl border border-slate-200" />
+          <img src="images/jp/04_analysis_idle.png" alt="分析画面" class="mt-4 rounded-2xl border border-slate-200" />
+          <img src="images/jp/04_analysis_playback.png" alt="分析画面再生中" class="mt-4 rounded-2xl border border-slate-200" />
         </div>
       </div>
     </div>

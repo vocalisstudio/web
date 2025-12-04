@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Japanese Pages -->
+  <url>
+    <loc>https://vocalisstudio.github.io/web/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://vocalisstudio.github.io/web/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://vocalisstudio.github.io/web/en/" />
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vocalisstudio.github.io/web/privacy.html</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://vocalisstudio.github.io/web/terms.html</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://vocalisstudio.github.io/web/support.html</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- English Pages -->
+  <url>
+    <loc>https://vocalisstudio.github.io/web/en/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vocalisstudio.github.io/web/en/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://vocalisstudio.github.io/web/" />
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vocalisstudio.github.io/web/en/privacy.html</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://vocalisstudio.github.io/web/en/terms.html</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://vocalisstudio.github.io/web/en/support.html</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+</urlset>
