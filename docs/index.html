@@ -46,11 +46,6 @@
       "price": "0",
       "priceCurrency": "JPY"
     },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "ratingCount": "1"
-    },
     "description": "スケール再生と同時録音。リアルタイムのピッチ検出とスペクトログラム分析で、歌声をデータで理解するiOSアプリ。",
     "downloadUrl": "https://apps.apple.com/jp/app/vocalis-studio/id6755569862",
     "softwareVersion": "1.1.0",
@@ -170,37 +165,40 @@
     </div>
   </section>
 
-  <section id="pricing" class="py-16 md:py-24 bg-white">
-    <div class="mx-auto max-w-6xl px-4">
-      <div class="mb-10 text-center">
-        <p class="eyebrow">PLAN</p>
-        <h2 class="mt-2 text-3xl md:text-4xl font-semibold tracking-tight">プラン</h2>
-      </div>
-      <div class="grid md:grid-cols-2 gap-8">
-        <div class="card rounded-3xl p-8">
-          <h3 class="text-xl font-semibold">Free</h3>
-          <p class="mt-2 text-slate-700">基本機能</p>
-          <ul class="mt-4 space-y-2 text-slate-700">
-            <li>・基本録音</li>
-            <li>・リアルタイムピッチ検出</li>
-            <li>・5音スケール再生</li>
-            <li>・録音制限: 1日5回 / 最大30秒</li>
+  <!-- Pricing -->
+  <section id="pricing" class="py-20 bg-slate-50">
+    <div class="mx-auto max-w-3xl px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">プラン</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+
+        <div class="card p-6">
+          <h3 class="text-lg font-semibold">Free</h3>
+          <p class="text-3xl font-bold mt-2">¥0</p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600">
+            <li>✓ 基本録音</li>
+            <li>✓ リアルタイムピッチ検出</li>
+            <li>✓ 5音スケール再生</li>
+            <li class="text-slate-400">× 1日5回 / 最大30秒</li>
           </ul>
         </div>
-        <div class="card rounded-3xl p-8 border border-[color:var(--accent)]">
-          <div class="inline-flex items-center gap-2 rounded-full bg-[color:var(--accent)]/10 px-3 py-1 text-[color:var(--accent-ink)] text-sm">おすすめ</div>
-          <h3 class="mt-3 text-xl font-semibold">Premium</h3>
-          <p class="mt-2 text-3xl font-bold text-slate-900">¥500<span class="text-base font-normal text-slate-600">/月</span></p>
-          <p class="mt-1 text-sm text-slate-600">自動更新サブスクリプション</p>
-          <ul class="mt-4 space-y-2 text-slate-700">
-            <li>・録音回数無制限</li>
-            <li>・録音時間が最大5分に延長</li>
+
+        <div class="card p-6 border-2 border-[color:var(--accent)]">
+          <div class="text-xs font-medium text-[color:var(--accent)] mb-1">おすすめ</div>
+          <h3 class="text-lg font-semibold">Premium</h3>
+          <p class="text-3xl font-bold mt-2">¥500<span class="text-base font-normal text-slate-500">/月</span></p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600">
+            <li>✓ Freeの全機能</li>
+            <li>✓ <strong>録音回数無制限</strong></li>
+            <li>✓ <strong>最大5分</strong>まで録音可能</li>
           </ul>
-          <p class="mt-4 text-xs text-slate-500">サブスクリプションはiTunesアカウントに請求されます。期間終了の24時間前までにキャンセルしない限り自動更新されます。</p>
+          <p class="mt-4 text-xs text-slate-400">自動更新サブスクリプション。いつでもキャンセル可能。</p>
         </div>
+
       </div>
       <div class="text-center mt-10">
-        <a href="https://apps.apple.com/jp/app/vocalis-studio/id6755569862" class="inline-flex items-center gap-2 rounded-full bg-[color:var(--accent)] px-6 py-3 text-white font-medium shadow hover:opacity-95">App Storeで入手</a>
+        <a href="https://apps.apple.com/jp/app/vocalis-studio/id6755569862">
+          <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/ja-jp?size=250x83" alt="App Storeからダウンロード" class="h-12 mx-auto" />
+        </a>
       </div>
     </div>
   </section>
@@ -238,13 +236,29 @@
     </div>
   </section>
 
-  <footer class="py-12 bg-white border-t border-slate-200/60">
-    <div class="mx-auto max-w-6xl px-4 flex flex-col md:flex-row items-center justify-between gap-4">
-      <p class="text-sm text-slate-600">© 2025 Kazu Asato</p>
-      <div class="flex items-center gap-6 text-sm">
-        <a href="terms.html" class="text-slate-700 hover:text-slate-900">利用規約</a>
-        <a href="privacy.html" class="text-slate-700 hover:text-slate-900">プライバシーポリシー</a>
+  <!-- Footer -->
+  <footer class="py-10 bg-white border-t border-slate-200">
+    <div class="mx-auto max-w-5xl px-6">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-2">
+          <div class="h-6 w-6 rounded bg-[color:var(--accent)] flex items-center justify-center text-white font-bold text-xs">V</div>
+          <span class="font-medium text-slate-700 text-sm">Vocalis Studio</span>
+        </div>
+        <div class="flex items-center gap-5 text-sm text-slate-500">
+          <a href="terms.html" class="hover:text-slate-700">利用規約</a>
+          <a href="privacy.html" class="hover:text-slate-700">プライバシーポリシー</a>
+          <a href="support.html" class="hover:text-slate-700">サポート</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="https://x.com/vocaborabo" target="_blank" class="text-slate-400 hover:text-slate-600">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://instagram.com/vocalis_studio" target="_blank" class="text-slate-400 hover:text-slate-600">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+        </div>
       </div>
+      <p class="text-center text-xs text-slate-400 mt-6">© 2025 Kazu Asato</p>
     </div>
   </footer>
 </body>
