@@ -1,10 +1,10 @@
 # Release Announcement v1.0
 
 ## Status
-- [ ] Posted
+- [x] Posted
 
-## Scheduled Date
-June XX, 2025
+## Posted Date
+December 5, 2025
 
 ---
 
@@ -24,12 +24,7 @@ Download on the App Store.
 ---
 
 ## Image
-- [ ] Feed (1080x1080px / 1:1)
-- [ ] Or (1080x1350px / 4:5)
-
-## Image Concept
-- App icon + App name
-- Main screen screenshot
+- [x] 04_analysis_playback.png (docs/images/en/)
 
 ## Notes
 - Initial release announcement
