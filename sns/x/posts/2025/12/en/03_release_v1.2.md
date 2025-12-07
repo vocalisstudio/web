@@ -1,10 +1,10 @@
 # Release Announcement v1.2
 
 ## Status
-- [ ] Posted
+- [x] Posted
 
-## Scheduled Date
-December 2025
+## Posted Date
+December 7, 2025
 
 ---
 
