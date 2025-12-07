@@ -8,21 +8,14 @@ December 2025
 
 ---
 
-## Post Content
+## Post Content (under 280 chars)
 
 ```
-🎵 Vocalis Studio v1.2.0 is now available!
+🎵 Vocalis Studio v1.2.0
 
-NEW FEATURES
-• New scale patterns added
-  - Broken Scale (arpeggio pattern)
-  - Rossini Scale (1.5 octave)
-  - 5-Tone Down / Arpeggio Down Triple
+• 4 new scale patterns (Rossini, Broken, etc.)
 • BPM range expanded to 30-240
-
-IMPROVEMENTS
 • Octave correction for pitch detection
-• Improved scale playback accuracy
 
 App Store: https://apps.apple.com/us/app/vocalis-studio/id6755569862
 

@@ -6,16 +6,27 @@
 
 ---
 
+## 文字数制限
+
+| プラットフォーム | 制限 | 備考 |
+|------------------|------|------|
+| X（Twitter） | 280文字 | 日本語は140文字相当、URLは23文字としてカウント |
+| Instagram | 2,200文字 | 改行で読みやすく |
+
+---
+
 ## X（Twitter）
 
+**文字数目安**: 本文100〜120文字 + URL(23文字) + ハッシュタグ(約40文字) = 約180文字以内
+
 ```
-🎵 Vocalis Studio v[VERSION]をリリースしました
+🎵 Vocalis Studio v[VERSION]をリリース
 
 ・[変更点1]
 ・[変更点2]
 ・[変更点3]
 
-App Store: https://apps.apple.com/jp/app/vocalis-studio/id6755569862
+App Store: [URL]
 
 #VocalisStudio #ボイトレ #音声分析
 ```

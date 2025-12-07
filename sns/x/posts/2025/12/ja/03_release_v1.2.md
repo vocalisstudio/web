@@ -8,21 +8,14 @@
 
 ---
 
-## 投稿内容
+## 投稿内容（140文字以内）
 
 ```
-🎵 Vocalis Studio v1.2.0をリリースしました
+🎵 Vocalis Studio v1.2.0
 
-【新機能】
-・新スケールパターン追加
-  - Broken Scale（分散和音）
-  - Rossini Scale（1.5オクターブ）
-  - 5-Tone Down / Arpeggio Down Triple
+・新スケール4種追加（Rossini等）
 ・BPM範囲を30〜240に拡大
-
-【改善】
-・ピッチ検出のオクターブ補正機能
-・スケール再生の精度向上
+・オクターブ補正機能追加
 
 App Store: https://apps.apple.com/jp/app/vocalis-studio/id6755569862
 
