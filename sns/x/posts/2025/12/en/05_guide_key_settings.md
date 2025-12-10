@@ -1,4 +1,4 @@
-# Usage Guide 3: Key Ascending/Descending Settings
+# Usage Guide: Key Ascending/Descending Settings
 
 ## Status
 - [ ] Posted
@@ -11,19 +11,18 @@ December 2025
 ## Content
 
 ```
-🎤 Usage Guide 3【Key Settings】
+🎤 Usage Guide【Key Settings】
 
-🔼 Key Ascending
-🔽 Key Descending
+🔼 Key Ascending / 🔽 Key Descending
 
-Set count and interval (half/whole step) for each.
+Set count and interval (half step, whole step, etc.) for each.
 
 Great for range checks and expansion exercises.
 
 #VocalisStudio #VoiceTraining
 ```
 
-**Character count**: ~180 characters
+**Character count**: ~195 characters
 
 ---
 

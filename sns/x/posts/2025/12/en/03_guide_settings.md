@@ -1,4 +1,4 @@
-# Usage Guide 1: Settings Overview
+# Usage Guide: Settings Overview
 
 ## Status
 - [ ] Posted
@@ -11,7 +11,7 @@ December 2025
 ## Content
 
 ```
-🎤 Usage Guide 1【Settings】
+🎤 Usage Guide【Settings】
 
 ⚙️ Subscription
 🎙️ Input (microphone)
@@ -23,7 +23,7 @@ Check your audio settings before recording for accurate results.
 #VocalisStudio #VoiceTraining
 ```
 
-**Character count**: ~175 characters
+**Character count**: ~170 characters
 
 ---
 

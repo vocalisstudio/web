@@ -1,4 +1,4 @@
-# Usage Guide 1: Settings Overview
+# Usage Guide: Settings Overview
 
 ## Status
 - [ ] Posted
@@ -11,7 +11,7 @@ December 2025
 ## Caption
 
 ```
-🎤 Vocalis Studio Usage Guide 1
+🎤 Vocalis Studio Usage Guide
 
 【Settings Overview】
 
@@ -40,6 +40,6 @@ Please verify your audio settings before recording for more accurate analysis re
 - [ ] 06_settings.png (docs/images/en/)
 
 ## Notes
-- Usage guide series part 1
+- Usage guide series
 - Overview of settings screen
 - More detailed explanation for Instagram

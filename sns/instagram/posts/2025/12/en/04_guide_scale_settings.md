@@ -1,4 +1,4 @@
-# Usage Guide 2: Scale Settings
+# Usage Guide: Scale Settings
 
 ## Status
 - [ ] Posted
@@ -11,7 +11,7 @@ December 2025
 ## Caption
 
 ```
-🎤 Vocalis Studio Usage Guide 2
+🎤 Vocalis Studio Usage Guide
 
 【Scale Settings】
 
@@ -40,5 +40,5 @@ Configure settings based on your vocal range and practice goals.
 - [ ] 02_recording_idle.png (docs/images/en/)
 
 ## Notes
-- Usage guide series part 2
+- Usage guide series
 - Recording screen scale settings
