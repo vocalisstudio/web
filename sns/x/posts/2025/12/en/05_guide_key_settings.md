@@ -11,24 +11,19 @@ December 2025
 ## Content
 
 ```
-🎤 Vocalis Studio Usage Guide 3
-
-【Key Ascending/Descending Settings】
-
-Fine-tune the range of your scale practice:
+🎤 Usage Guide 3【Key Settings】
 
 🔼 Key Ascending
-・Count: number of steps up
-・Interval: half step or whole step
-
 🔽 Key Descending
-・Count: number of steps down
-・Interval: half step or whole step
 
-Ideal for vocal range checks and range expansion exercises.
+Set count and interval (half/whole step) for each.
 
-#VocalisStudio #VoiceTraining #VocalRange
+Great for range checks and expansion exercises.
+
+#VocalisStudio #VoiceTraining
 ```
+
+**Character count**: ~180 characters
 
 ---
 

@@ -11,21 +11,19 @@ December 2025
 ## Content
 
 ```
-🎤 Vocalis Studio Usage Guide 1
+🎤 Usage Guide 1【Settings】
 
-【Settings Overview】
+⚙️ Subscription
+🎙️ Input (microphone)
+🔊 Output (speaker)
+🌐 Language
 
-You can view and modify the following items in Settings:
+Check your audio settings before recording for accurate results.
 
-⚙️ Subscription management
-🎙️ Input settings (microphone selection)
-🔊 Output settings (speaker selection)
-🌐 Language settings
-
-Please verify your audio settings before recording for more accurate analysis results.
-
-#VocalisStudio #VoiceTraining #VocalPractice
+#VocalisStudio #VoiceTraining
 ```
+
+**Character count**: ~175 characters
 
 ---
 

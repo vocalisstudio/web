@@ -11,21 +11,19 @@ December 2025
 ## Content
 
 ```
-🎤 Vocalis Studio Usage Guide 2
+🎤 Usage Guide 2【Scale Settings】
 
-【Scale Settings】
+🎵 Scale: 5-tone / 1.5 octave
+🎹 Start pitch
+⏱️ Tempo (BPM)
+📈 Progression pattern
 
-Customize your practice on the recording screen:
+Customize based on your vocal range.
 
-🎵 Scale selection: 5-tone / 1.5 octave
-🎹 Start pitch: specify the starting note
-⏱️ Tempo: adjust BPM with slider
-📈 Progression pattern: ascending → descending, etc.
-
-Configure settings based on your vocal range and practice goals.
-
-#VocalisStudio #VoiceTraining #PitchTraining
+#VocalisStudio #VoiceTraining
 ```
+
+**Character count**: ~170 characters
 
 ---
 
