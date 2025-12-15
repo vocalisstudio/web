@@ -6,6 +6,23 @@ Vocalis Studio の Web サイトおよび関連ドキュメントのリポジト
 
 ```
 web/
+├── blog/              # ブログ（Astro）
+│   ├── src/
+│   │   ├── content/   # ブログ記事（Markdown）
+│   │   │   └── posts/
+│   │   ├── layouts/   # レイアウトテンプレート
+│   │   ├── pages/     # ページルーティング
+│   │   ├── components/# UIコンポーネント
+│   │   └── styles/    # スタイル
+│   ├── content-management/  # AI記事作成用（管理）
+│   │   ├── AGENT_INSTRUCTIONS.md  # AI向け指示書
+│   │   ├── guidelines/      # 執筆ガイドライン
+│   │   ├── templates/       # 記事テンプレート
+│   │   └── drafts/          # 下書き保存場所
+│   ├── public/        # 静的アセット
+│   ├── astro.config.mjs
+│   └── package.json
+│
 ├── docs/              # 公開ページ (GitHub Pages)
 │   ├── index.html     # 日本語製品ページ
 │   ├── en/            # 英語版ページ
@@ -13,6 +30,7 @@ web/
 │   │   ├── privacy.html
 │   │   ├── terms.html
 │   │   └── support.html
+│   ├── blog/          # ブログ出力先（Astroビルド）
 │   ├── privacy.html   # プライバシーポリシー
 │   ├── terms.html     # 利用規約
 │   ├── support.html   # サポートページ
@@ -51,6 +69,7 @@ web/
 
 - **日本語**: https://vocalisstudio.github.io/web/
 - **English**: https://vocalisstudio.github.io/web/en/
+- **ブログ**: https://vocalisstudio.github.io/web/blog/
 
 ## App Store
 
@@ -64,7 +83,24 @@ web/
 
 ## 開発
 
-### ローカルプレビュー
+### ブログ開発
+
+```bash
+cd blog
+npm install
+npm run dev
+# http://localhost:4321/web/blog/ でプレビュー
+```
+
+### ブログビルド
+
+```bash
+cd blog
+npm run build
+# docs/blog/ に出力される
+```
+
+### 製品ページのローカルプレビュー
 
 ```bash
 cd docs
@@ -75,6 +111,27 @@ python -m http.server 8000
 ### デプロイ
 
 `main` ブランチへの push で GitHub Pages に自動デプロイされます。
+
+**ブログの更新フロー:**
+1. `blog/src/content/posts/` に記事を追加
+2. `cd blog && npm run build` でビルド
+3. `docs/blog/` の変更をコミット・プッシュ
+
+### AIエージェントによる記事作成
+
+詳細は `blog/content-management/AGENT_INSTRUCTIONS.md` を参照。
+
+```bash
+# AIへの指示例
+@blog/content-management/guidelines/BLOG_STYLE_GUIDE.md
+「ピッチ分析の基礎」について記事を作成してください。
+```
+
+**フロー:**
+1. AIが `blog/content-management/drafts/` に下書きを作成
+2. 人間がレビュー・修正
+3. `blog/src/content/posts/` に移動
+4. ビルド＆デプロイ
 
 ## ライセンス
 

@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+
+# Build output (managed separately in docs/blog)
+dist/
+
+# Astro
+.astro/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Editor
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*

@@ -1,0 +1,110 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+}
+
+const { title, description = 'Vocalis Studio Blog', ogImage } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/web/images/favicon-32x32.png" />
+    <link rel="apple-touch-icon" href="/web/images/apple-touch-icon.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} | Vocalis Studio Blog</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    {ogImage && <meta property="og:image" content={ogImage} />}
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <a href="/web/blog/" class="logo">Vocalis Studio Blog</a>
+        <div class="nav-links">
+          <a href="/web/blog/">記事一覧</a>
+          <a href="/web/">製品ページ</a>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <slot />
+    </main>
+    <footer class="footer">
+      <p>&copy; 2025 Kazu Asato. All rights reserved.</p>
+      <p>
+        <a href="/web/privacy.html">プライバシーポリシー</a> |
+        <a href="/web/terms.html">利用規約</a>
+      </p>
+    </footer>
+  </body>
+</html>
+
+<style>
+  .header {
+    border-bottom: 1px solid var(--color-border);
+    padding: 1rem;
+  }
+
+  .nav {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: var(--color-text);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .nav-links a {
+    color: var(--color-text-light);
+    font-size: 0.875rem;
+  }
+
+  .nav-links a:hover {
+    color: var(--color-primary);
+  }
+
+  .main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  .footer {
+    border-top: 1px solid var(--color-border);
+    padding: 2rem 1rem;
+    text-align: center;
+    color: var(--color-text-light);
+    font-size: 0.875rem;
+  }
+
+  .footer p {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer a {
+    color: var(--color-text-light);
+  }
+</style>
