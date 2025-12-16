@@ -1,7 +1,7 @@
 ---
 title: 'はじめての録音'
 description: 'Vocalis Studioで声を録音する方法を、ステップバイステップで紹介します。'
-pubDate: 2025-12-16T12:00:00
+pubDate: 2025-12-16T10:00:00
 tags: ['使い方']
 ---
 
@@ -25,7 +25,7 @@ Vocalis Studioを使えば、声の録音はとても簡単です。アプリを
 
 ホーム画面の「録音開始」ボタンをタップします。録音の設定画面が表示されます。
 
-![ホーム画面](/images/ja/01_home.png)
+![ホーム画面](/web/blog/images/ja/01_home.png)
 
 ### スケールをOffに
 
@@ -36,7 +36,7 @@ Vocalis Studioを使えば、声の録音はとても簡単です。アプリを
 
 iPadを横向きにすると、設定パネルが左側に表示されます。縦向きでは折りたたみ式です。
 
-![録音画面（録音前）](/images/ja/02_recording_idle.png)
+![録音画面（録音前）](/web/blog/images/ja/02_recording_idle.png)
 
 ### 録音スタート
 
@@ -48,11 +48,11 @@ iPadを横向きにすると、設定パネルが左側に表示されます。�
 - **レベルメーター**: 音量の確認に
 - **ピッチ表示**: 今出している音の高さ
 
-![録音中](/images/ja/02_recording_in_progress.png)
+![録音中](/web/blog/images/ja/02_recording_in_progress.png)
 
 歌い終わったら停止ボタンをタップ。録音は自動で保存されます。
 
-![録音完了](/images/ja/02_recording_complete.png)
+![録音完了](/web/blog/images/ja/02_recording_complete.png)
 
 ## 録音したら
 
@@ -62,7 +62,7 @@ iPadを横向きにすると、設定パネルが左側に表示されます。�
 - **分析へ**: ピッチグラフや統計を見る
 - **もう一度**: 新しい録音を始める
 
-![再生モード](/images/ja/02_recording_playback.png)
+![再生モード](/web/blog/images/ja/02_recording_playback.png)
 
 分析画面では、音程の正確さや声の特徴を詳しく確認できます。
 

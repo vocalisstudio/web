@@ -1,7 +1,7 @@
 ---
 title: '録音を管理する'
 description: '録音の再生、並べ替え、検索、削除など、録音一覧の使い方を解説します。'
-pubDate: 2025-12-16T10:00:00
+pubDate: 2025-12-16T12:00:00
 tags: ['使い方']
 ---
 
@@ -29,7 +29,7 @@ tags: ['使い方']
 - 長さ
 - 使用したスケール
 
-![録音一覧](/images/ja/03_recording_list_idle.png)
+![録音一覧](/web/blog/images/ja/03_recording_list_idle.png)
 
 ## 再生コントロール
 
@@ -43,7 +43,7 @@ tags: ['使い方']
 
 分析画面を開かなくても、さっと聴き返したいときに便利です。
 
-![録音一覧（再生中）](/images/ja/03_recording_list_playback.png)
+![録音一覧（再生中）](/web/blog/images/ja/03_recording_list_playback.png)
 
 ## 並べ替え
 
@@ -130,7 +130,7 @@ tags: ['使い方']
 - スペクトログラム
 - 統計情報
 
-![分析画面](/images/ja/04_analysis_idle.png)
+![分析画面](/web/blog/images/ja/04_analysis_idle.png)
 
 練習の振り返りに活用してください。
 

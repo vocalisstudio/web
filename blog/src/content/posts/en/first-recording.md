@@ -1,7 +1,7 @@
 ---
 title: 'Your First Recording'
 description: 'Learn how to make your first voice recording with Vocalis Studio in just a few simple steps.'
-pubDate: 2025-12-16T12:00:00
+pubDate: 2025-12-16T10:00:00
 tags: ['Guide']
 ---
 
@@ -27,7 +27,7 @@ Making your first recording takes just three steps:
 
 From the home screen, tap the "Start Recording" button. This takes you to the recording screen where you can configure your recording settings.
 
-![Home Screen](/images/en/01_home.png)
+![Home Screen](/web/blog/images/en/01_home.png)
 
 ### Step 2: Configure Settings (Optional)
 
@@ -38,7 +38,7 @@ For your first recording, I recommend keeping things simple:
 
 The settings panel is on the left side in landscape mode, or can be toggled in portrait mode.
 
-![Recording Screen - Ready to Record](/images/en/02_recording_idle.png)
+![Recording Screen - Ready to Record](/web/blog/images/en/02_recording_idle.png)
 
 ### Step 3: Start Recording
 
@@ -50,11 +50,11 @@ While recording, you will see:
 - **Audio level meter**: Shows your current volume
 - **Pitch detection**: Displays the detected pitch in real-time
 
-![Recording in Progress](/images/en/02_recording_in_progress.png)
+![Recording in Progress](/web/blog/images/en/02_recording_in_progress.png)
 
 When you are finished, tap the stop button. Your recording is automatically saved.
 
-![Recording Complete](/images/en/02_recording_complete.png)
+![Recording Complete](/web/blog/images/en/02_recording_complete.png)
 
 ## What Happens After Recording
 
@@ -64,7 +64,7 @@ Once you stop recording, you have several options:
 - **Go to Analysis**: View detailed pitch analysis and statistics
 - **Start New Recording**: Begin another recording session
 
-![Playback Mode](/images/en/02_recording_playback.png)
+![Playback Mode](/web/blog/images/en/02_recording_playback.png)
 
 The analysis screen provides valuable insights into your pitch accuracy and vocal characteristics.
 

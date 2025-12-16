@@ -73,7 +73,7 @@ Vocalis Studioには9つのスケールパターンがあります。
 - **下降キー回数**: 何キー下がるか（0〜24）
 - **ステップ間隔**: 1ステップで何半音動くか（1〜12）
 
-![録音画面（スケール設定）](/images/ja/02_recording_idle.png)
+![録音画面（スケール設定）](/web/blog/images/ja/02_recording_idle.png)
 
 ## 練習中の画面
 
@@ -83,7 +83,7 @@ Vocalis Studioには9つのスケールパターンがあります。
 2. **スケール再生**: ガイド音が1音ずつ流れる
 3. **リアルタイム表示**: あなたのピッチと目標の比較
 
-![スケール練習中](/images/ja/02_recording_in_progress.png)
+![スケール練習中](/web/blog/images/ja/02_recording_in_progress.png)
 
 インジケーターには3つの情報が表示されます。
 
