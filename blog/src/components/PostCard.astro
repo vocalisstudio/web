@@ -1,22 +1,25 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import type { Language } from '../content/config';
+import { defaultLang } from '../content/config';
+import { formatDate, getSlugWithoutLang } from '../i18n/utils';
 
 interface Props {
   post: CollectionEntry<'posts'>;
+  lang?: Language;
 }
 
-const { post } = Astro.props;
+const { post, lang = defaultLang } = Astro.props;
 const { title, description, pubDate, tags } = post.data;
+const basePath = import.meta.env.BASE_URL || '/web/blog';
+const slug = getSlugWithoutLang(post.slug);
 
-const formattedDate = pubDate.toLocaleDateString('ja-JP', {
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric',
-});
+const formattedDate = formatDate(pubDate, lang);
+const readMoreText = lang === 'ja' ? '続きを読む →' : 'Read more →';
 ---
 
 <article class="post-card">
-  <a href={`/web/blog/posts/${post.slug}/`}>
+  <a href={`${basePath}/${lang}/posts/${slug}/`}>
     <div class="post-meta">
       <time datetime={pubDate.toISOString()}>{formattedDate}</time>
       {tags.length > 0 && (
@@ -29,7 +32,7 @@ const formattedDate = pubDate.toLocaleDateString('ja-JP', {
     </div>
     <h2>{title}</h2>
     <p>{description}</p>
-    <span class="read-more">続きを読む →</span>
+    <span class="read-more">{readMoreText}</span>
   </a>
 </article>
 

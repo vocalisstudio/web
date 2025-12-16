@@ -1,33 +1,34 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import type { Language } from '../content/config';
+import { defaultLang } from '../content/config';
 import BaseLayout from './BaseLayout.astro';
+import { useTranslations } from '../i18n/ui';
+import { formatDate, getSlugWithoutLang } from '../i18n/utils';
 
 interface Props {
   post: CollectionEntry<'posts'>;
+  lang?: Language;
 }
 
-const { post } = Astro.props;
+const { post, lang = defaultLang } = Astro.props;
 const { title, description, pubDate, updatedDate, heroImage, tags } = post.data;
+const t = useTranslations(lang);
+const basePath = import.meta.env.BASE_URL || '/web/blog';
+const slug = getSlugWithoutLang(post.slug);
 
-const formattedDate = pubDate.toLocaleDateString('ja-JP', {
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric',
-});
-
-const formattedUpdatedDate = updatedDate?.toLocaleDateString('ja-JP', {
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric',
-});
+const formattedDate = formatDate(pubDate, lang);
+const formattedUpdatedDate = updatedDate ? formatDate(updatedDate, lang) : null;
 ---
 
-<BaseLayout title={title} description={description} ogImage={heroImage}>
+<BaseLayout title={title} description={description} ogImage={heroImage} lang={lang} slug={slug}>
   <article class="post">
     <header class="post-header">
       <time datetime={pubDate.toISOString()}>{formattedDate}</time>
       {updatedDate && (
-        <span class="updated">（更新: {formattedUpdatedDate}）</span>
+        <span class="updated">
+          {lang === 'ja' ? `（更新: ${formattedUpdatedDate}）` : `(Updated: ${formattedUpdatedDate})`}
+        </span>
       )}
       <h1>{title}</h1>
       {tags.length > 0 && (
@@ -45,7 +46,7 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('ja-JP', {
       <slot />
     </div>
     <footer class="post-footer">
-      <a href="/web/blog/">&larr; 記事一覧に戻る</a>
+      <a href={`${basePath}/${lang}/`}>{t('nav.back')}</a>
     </footer>
   </article>
 </BaseLayout>

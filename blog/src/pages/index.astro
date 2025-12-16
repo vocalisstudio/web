@@ -1,70 +1,28 @@
 ---
-import { getCollection } from 'astro:content';
-import BaseLayout from '../layouts/BaseLayout.astro';
-import PostCard from '../components/PostCard.astro';
+import { defaultLang } from '../content/config';
 
-const posts = (await getCollection('posts', ({ data }) => !data.draft))
-  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const basePath = import.meta.env.BASE_URL || '/web/blog';
+const defaultRedirect = `${basePath}/${defaultLang}/`;
 ---
 
-<BaseLayout title="記事一覧" description="Vocalis Studioの開発ブログ。アプリのアップデート情報や音楽制作のヒントをお届けします。">
-  <section class="hero">
-    <h1>Vocalis Studio Blog</h1>
-    <p>アプリのアップデート情報や音楽制作のヒントをお届けします。</p>
-  </section>
-
-  <section class="posts">
-    {posts.length === 0 ? (
-      <p class="no-posts">まだ記事がありません。</p>
-    ) : (
-      posts.map((post) => <PostCard post={post} />)
-    )}
-  </section>
-</BaseLayout>
-
-<style>
-  .hero {
-    text-align: center;
-    margin-bottom: 3rem;
-    padding: 2.5rem 1.5rem;
-    background: linear-gradient(135deg, var(--color-bg-tertiary) 0%, var(--color-bg) 100%);
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--color-border-light);
-  }
-
-  .hero h1 {
-    margin-top: 0;
-    margin-bottom: 0.75rem;
-    font-size: 1.75rem;
-    font-weight: 600;
-    color: var(--color-text);
-    letter-spacing: -0.01em;
-  }
-
-  @media (min-width: 640px) {
-    .hero h1 {
-      font-size: 2rem;
-    }
-  }
-
-  .hero p {
-    color: var(--color-text-light);
-    margin: 0;
-    font-size: 0.9375rem;
-    line-height: 1.7;
-  }
-
-  .posts {
-    display: grid;
-    gap: 1.25rem;
-  }
-
-  .no-posts {
-    color: var(--color-text-muted);
-    text-align: center;
-    padding: 4rem 0;
-    background: var(--color-bg-tertiary);
-    border-radius: var(--radius-md);
-    font-size: 0.9375rem;
-  }
-</style>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting... | Vocalis Studio Blog</title>
+    <link rel="canonical" href={defaultRedirect} />
+    <meta http-equiv="refresh" content={`0;url=${defaultRedirect}`} />
+    <script is:inline define:vars={{ basePath }}>
+      (function() {
+        const lang = navigator.language || navigator.userLanguage || 'en';
+        const isJapanese = lang.startsWith('ja');
+        const targetLang = isJapanese ? 'ja' : 'en';
+        window.location.replace(basePath + '/' + targetLang + '/');
+      })();
+    </script>
+  </head>
+  <body>
+    <p>Redirecting to <a href={defaultRedirect}>Vocalis Studio Blog</a>...</p>
+  </body>
+</html>

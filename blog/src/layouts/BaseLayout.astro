@@ -1,18 +1,32 @@
 ---
 import '../styles/global.css';
+import type { Language } from '../content/config';
+import { defaultLang } from '../content/config';
+import { useTranslations } from '../i18n/ui';
+import { getAlternateLanguage } from '../i18n/utils';
+import LanguageSwitcher from '../components/LanguageSwitcher.astro';
 
 interface Props {
   title: string;
   description?: string;
   ogImage?: string;
+  lang?: Language;
+  slug?: string;
 }
 
-const { title, description = 'Vocalis Studio Blog - 歌声分析・ボイストレーニングの実践知', ogImage } = Astro.props;
+const { title, description, ogImage, lang = defaultLang, slug } = Astro.props;
+const t = useTranslations(lang);
+const alternateLang = getAlternateLanguage(lang);
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const basePath = import.meta.env.BASE_URL || '/web/blog';
+
+const alternateURL = slug
+  ? new URL(`${basePath}/${alternateLang}/posts/${slug}/`, Astro.site)
+  : new URL(`${basePath}/${alternateLang}/`, Astro.site);
 ---
 
 <!DOCTYPE html>
-<html lang="ja" class="scroll-smooth">
+<html lang={lang} class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,33 +34,39 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <link rel="icon" type="image/png" sizes="16x16" href="/web/images/favicon-16x16.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/web/images/apple-touch-icon.png" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title} | Vocalis Studio Blog</title>
-    <meta name="description" content={description} />
+    <title>{title} | {t('site.title')}</title>
+    <meta name="description" content={description || t('site.description')} />
     <link rel="canonical" href={canonicalURL} />
+    <link rel="alternate" hreflang={alternateLang} href={alternateURL} />
+    <link rel="alternate" hreflang={lang} href={canonicalURL} />
+    <link rel="alternate" hreflang="x-default" href={new URL(`${basePath}/en/`, Astro.site)} />
     <meta property="og:type" content="article" />
     <meta property="og:url" content={canonicalURL} />
-    <meta property="og:title" content={`${title} | Vocalis Studio Blog`} />
-    <meta property="og:description" content={description} />
-    <meta property="og:site_name" content="Vocalis Studio Blog" />
+    <meta property="og:title" content={`${title} | ${t('site.title')}`} />
+    <meta property="og:description" content={description || t('site.description')} />
+    <meta property="og:site_name" content={t('site.title')} />
+    <meta property="og:locale" content={lang === 'ja' ? 'ja_JP' : 'en_US'} />
+    <meta property="og:locale:alternate" content={lang === 'ja' ? 'en_US' : 'ja_JP'} />
     {ogImage && <meta property="og:image" content={ogImage} />}
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="alternate" type="application/rss+xml" title="Vocalis Studio Blog RSS" href="/web/blog/rss.xml" />
+    <link rel="alternate" type="application/rss+xml" title={`${t('site.title')} RSS (${lang.toUpperCase()})`} href={`${basePath}/rss-${lang}.xml`} />
   </head>
   <body>
     <header class="header">
       <nav class="nav">
-        <a href="/web/blog/" class="logo">
+        <a href={`${basePath}/${lang}/`} class="logo">
           <span class="logo-icon">V</span>
           <span class="logo-text">Vocalis Studio Blog</span>
         </a>
         <div class="nav-links">
-          <a href="/web/blog/">記事一覧</a>
-          <a href="/web/">製品ページ</a>
-          <a href="/web/blog/rss.xml" class="rss-link" title="RSS">
+          <a href={`${basePath}/${lang}/`}>{lang === 'ja' ? '記事一覧' : 'Posts'}</a>
+          <a href="/web/">{lang === 'ja' ? '製品ページ' : 'Product'}</a>
+          <a href={`${basePath}/rss-${lang}.xml`} class="rss-link" title="RSS">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
               <path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1Z"/>
             </svg>
           </a>
+          <LanguageSwitcher lang={lang} slug={slug} />
         </div>
       </nav>
     </header>
@@ -62,9 +82,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
           <span>Vocalis Studio</span>
         </div>
         <div class="footer-links">
-          <a href="/web/terms.html">利用規約</a>
-          <a href="/web/privacy.html">プライバシーポリシー</a>
-          <a href="/web/support.html">サポート</a>
+          <a href="/web/terms.html">{lang === 'ja' ? '利用規約' : 'Terms'}</a>
+          <a href="/web/privacy.html">{lang === 'ja' ? 'プライバシーポリシー' : 'Privacy'}</a>
+          <a href="/web/support.html">{lang === 'ja' ? 'サポート' : 'Support'}</a>
         </div>
         <div class="footer-social">
           <a href="https://x.com/vocaborabo" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
@@ -75,7 +95,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
           </a>
         </div>
       </div>
-      <p class="copyright">&copy; 2025 Kazu Asato</p>
+      <p class="copyright">{t('footer.copyright')}</p>
     </footer>
   </body>
 </html>
