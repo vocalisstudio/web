@@ -1,0 +1,186 @@
+<!DOCTYPE html><html lang="ja" class="scroll-smooth" data-astro-cid-37fxchfa> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/png" sizes="32x32" href="/web/images/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/web/images/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/web/images/apple-touch-icon.png"><meta name="generator" content="Astro v5.16.5"><title>録音を管理する | Vocalis Studio ブログ</title><meta name="description" content="録音の再生、並べ替え、検索、削除など、録音一覧の使い方を解説します。"><link rel="canonical" href="https://vocalisstudio.github.io/web/blog/ja/posts/manage-recordings/"><link rel="alternate" hreflang="en" href="https://vocalisstudio.github.io/web/blog/en/posts/manage-recordings/"><link rel="alternate" hreflang="ja" href="https://vocalisstudio.github.io/web/blog/ja/posts/manage-recordings/"><link rel="alternate" hreflang="x-default" href="https://vocalisstudio.github.io/web/blog/en/"><meta property="og:type" content="article"><meta property="og:url" content="https://vocalisstudio.github.io/web/blog/ja/posts/manage-recordings/"><meta property="og:title" content="録音を管理する | Vocalis Studio ブログ"><meta property="og:description" content="録音の再生、並べ替え、検索、削除など、録音一覧の使い方を解説します。"><meta property="og:site_name" content="Vocalis Studio ブログ"><meta property="og:locale" content="ja_JP"><meta property="og:locale:alternate" content="en_US"><meta name="twitter:card" content="summary_large_image"><link rel="alternate" type="application/rss+xml" title="Vocalis Studio ブログ RSS (JA)" href="/web/blog/rss-ja.xml"><link rel="stylesheet" href="/web/blog/_astro/_slug_.DgFEegL3.css">
+<style>.post[data-astro-cid-gjtny2mx]{background:#fff;border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);padding:2.5rem;margin-bottom:2rem}@media(max-width:640px){.post[data-astro-cid-gjtny2mx]{padding:1.5rem;border-radius:var(--radius-md)}}.post-header[data-astro-cid-gjtny2mx]{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--color-border-light)}.post-header[data-astro-cid-gjtny2mx] time[data-astro-cid-gjtny2mx]{color:var(--color-text-muted);font-size:.8125rem;font-family:var(--font-mono)}.updated[data-astro-cid-gjtny2mx]{color:var(--color-text-muted);font-size:.8125rem;margin-left:.5rem}.post-header[data-astro-cid-gjtny2mx] h1[data-astro-cid-gjtny2mx]{margin-top:.75rem;margin-bottom:1rem;font-size:1.75rem;font-weight:600;line-height:1.4;color:var(--color-text);letter-spacing:-.01em}@media(min-width:640px){.post-header[data-astro-cid-gjtny2mx] h1[data-astro-cid-gjtny2mx]{font-size:2rem}}.tags[data-astro-cid-gjtny2mx]{display:flex;gap:.5rem;flex-wrap:wrap}.tag[data-astro-cid-gjtny2mx]{background:var(--color-bg-secondary);color:var(--color-text-light);padding:.25rem .75rem;border-radius:var(--radius-sm);font-size:.75rem;font-weight:500}.hero-image[data-astro-cid-gjtny2mx]{width:100%;border-radius:var(--radius-md);margin-bottom:2rem;box-shadow:var(--shadow-sm)}.content[data-astro-cid-gjtny2mx]{margin-bottom:3rem}.content[data-astro-cid-gjtny2mx] h2{margin-top:2.5rem;margin-bottom:1rem;font-size:1.375rem;font-weight:600;color:var(--color-text);padding-bottom:.5rem;border-bottom:1px solid var(--color-border-light)}.content[data-astro-cid-gjtny2mx] h3{margin-top:2rem;margin-bottom:.75rem;font-size:1.125rem;font-weight:600;color:var(--color-text)}.content[data-astro-cid-gjtny2mx] p{margin-bottom:1.25rem;line-height:1.8}.content[data-astro-cid-gjtny2mx] ul,.content[data-astro-cid-gjtny2mx] ol{margin-bottom:1.25rem;padding-left:1.5rem}.content[data-astro-cid-gjtny2mx] li{margin-bottom:.5rem;line-height:1.7}.content[data-astro-cid-gjtny2mx] blockquote{border-left:3px solid var(--color-primary);padding-left:1.25rem;margin:1.5rem 0;color:var(--color-text-light);font-style:normal;background:var(--color-bg-tertiary);padding:1rem 1.25rem;border-radius:0 var(--radius-sm) var(--radius-sm) 0}.content[data-astro-cid-gjtny2mx] code{font-family:var(--font-mono);font-size:.875em;background:var(--color-bg-tertiary);padding:.2em .5em;border-radius:var(--radius-sm);color:var(--color-text)}.content[data-astro-cid-gjtny2mx] pre{padding:1.25rem;border-radius:var(--radius-md);overflow-x:auto;background:#1e2a3a;margin:1.5rem 0}.content[data-astro-cid-gjtny2mx] pre code{background:none;padding:0;color:#e2e8f0;font-size:.875rem}.content[data-astro-cid-gjtny2mx] a{color:var(--color-primary);text-decoration:underline;text-decoration-color:var(--color-primary);text-underline-offset:2px;transition:color .2s ease}.content[data-astro-cid-gjtny2mx] a:hover{color:var(--color-accent);text-decoration-color:var(--color-accent)}.content[data-astro-cid-gjtny2mx] img{max-width:100%;height:auto;border-radius:var(--radius-md);margin:1.5rem 0;box-shadow:var(--shadow-sm)}.content[data-astro-cid-gjtny2mx] hr{border:none;border-top:1px solid var(--color-border-light);margin:2.5rem 0}.post-footer[data-astro-cid-gjtny2mx]{padding-top:1.5rem;border-top:1px solid var(--color-border-light)}.post-footer[data-astro-cid-gjtny2mx] a[data-astro-cid-gjtny2mx]{display:inline-flex;align-items:center;gap:.5rem;color:var(--color-primary);font-size:.9375rem;font-weight:500;transition:color .2s ease}.post-footer[data-astro-cid-gjtny2mx] a[data-astro-cid-gjtny2mx]:hover{color:var(--color-accent);text-decoration:none}
+</style></head> <body data-astro-cid-37fxchfa> <header class="header" data-astro-cid-37fxchfa> <nav class="nav" data-astro-cid-37fxchfa> <a href="/web/blog/ja/" class="logo" data-astro-cid-37fxchfa> <span class="logo-icon" data-astro-cid-37fxchfa>V</span> <span class="logo-text" data-astro-cid-37fxchfa>Vocalis Studio Blog</span> </a> <div class="nav-links" data-astro-cid-37fxchfa> <a href="/web/blog/ja/" data-astro-cid-37fxchfa>記事一覧</a> <a href="/web/" data-astro-cid-37fxchfa>製品ページ</a> <a href="/web/blog/rss-ja.xml" class="rss-link" title="RSS" data-astro-cid-37fxchfa> <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-astro-cid-37fxchfa> <path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1Z" data-astro-cid-37fxchfa></path> </svg> </a> </div> </nav> </header> <main class="main" data-astro-cid-37fxchfa>  <article class="post" data-astro-cid-gjtny2mx> <header class="post-header" data-astro-cid-gjtny2mx> <time datetime="2025-12-16T00:00:00.000Z" data-astro-cid-gjtny2mx>2025年12月16日</time>  <h1 data-astro-cid-gjtny2mx>録音を管理する</h1> <div class="tags" data-astro-cid-gjtny2mx> <span class="tag" data-astro-cid-gjtny2mx>使い方</span> </div> </header>  <div class="content" data-astro-cid-gjtny2mx>  <h2 id="録音が増えてきたら">録音が増えてきたら</h2>
+<p>練習を続けていると、録音がどんどん増えていきます。Vocalis Studioには、それらを整理・管理するための機能が揃っています。</p>
+<p>ホーム画面の「録音一覧」から、すべての録音にアクセスできます。</p>
+<h2 id="できること">できること</h2>
+<ul>
+<li>録音の再生</li>
+<li>並べ替え（ソート）</li>
+<li>フィルターで絞り込み</li>
+<li>名前の変更</li>
+<li>削除</li>
+<li>分析画面への移動</li>
+</ul>
+<h2 id="一覧画面の見方">一覧画面の見方</h2>
+<p>各録音には以下の情報が表示されます。</p>
+<ul>
+<li>タイトル</li>
+<li>録音日時</li>
+<li>長さ</li>
+<li>使用したスケール</li>
+</ul>
+<p><img src="/images/ja/03_recording_list_idle.png" alt="録音一覧"></p>
+<h2 id="再生コントロール">再生コントロール</h2>
+<p>一覧画面から直接、録音を聴くことができます。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>ボタン</th><th>機能</th></tr></thead><tbody><tr><td>再生/停止</td><td>再生の開始・一時停止</td></tr><tr><td>前へ</td><td>前の録音へ</td></tr><tr><td>次へ</td><td>次の録音へ</td></tr></tbody></table>
+<p>分析画面を開かなくても、さっと聴き返したいときに便利です。</p>
+<p><img src="/images/ja/03_recording_list_playback.png" alt="録音一覧（再生中）"></p>
+<h2 id="並べ替え">並べ替え</h2>
+<p>6種類のソートオプションがあります。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>ソート</th><th>説明</th></tr></thead><tbody><tr><td>日時（新しい順）</td><td>最新の録音が上（デフォルト）</td></tr><tr><td>日時（古い順）</td><td>古い録音が上</td></tr><tr><td>タイトル（A→Z）</td><td>アルファベット順</td></tr><tr><td>タイトル（Z→A）</td><td>逆アルファベット順</td></tr><tr><td>長さ（短い順）</td><td>短いものから</td></tr><tr><td>長さ（長い順）</td><td>長いものから</td></tr></tbody></table>
+<h2 id="フィルター機能">フィルター機能</h2>
+<p>録音が多くなると、探すのが大変になります。フィルターを使えば、条件に合う録音だけを表示できます。</p>
+<h3 id="日付で絞る">日付で絞る</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>フィルター</th><th>表示</th></tr></thead><tbody><tr><td>すべて</td><td>全録音</td></tr><tr><td>今日</td><td>今日の録音</td></tr><tr><td>今週</td><td>今週の録音</td></tr><tr><td>今月</td><td>今月の録音</td></tr></tbody></table>
+<h3 id="スケールで絞る">スケールで絞る</h3>
+<p>使用したスケールタイプで絞り込めます。</p>
+<ul>
+<li>すべて</li>
+<li>Five Tone / Five Tone Down</li>
+<li>Octave系（Repeat / Long Tone）</li>
+<li>Broken Scale系</li>
+<li>Rossini Scale</li>
+<li>Arpeggio Down Triple</li>
+<li>フリー録音</li>
+</ul>
+<h3 id="ピッチ範囲で絞る">ピッチ範囲で絞る</h3>
+<p>特定の音域で練習した録音を探すとき。</p>
+<ul>
+<li>最低: C2（MIDI 36）</li>
+<li>最高: C6（MIDI 84）</li>
+</ul>
+<h3 id="テンポで絞る">テンポで絞る</h3>
+<p>設定したテンポで絞り込み。</p>
+<ul>
+<li>最低: 30 BPM</li>
+<li>最高: 240 BPM</li>
+</ul>
+<h3 id="テキスト検索">テキスト検索</h3>
+<p>タイトルや設定に含まれるキーワードで検索できます。</p>
+<h2 id="名前を変える">名前を変える</h2>
+<p>録音にわかりやすい名前を付けておくと、後から探しやすくなります。</p>
+<ol>
+<li>変更したい録音を選ぶ</li>
+<li>編集をタップ</li>
+<li>新しい名前を入力</li>
+<li>保存</li>
+</ol>
+<p>「朝練習 C4」「高音チャレンジ」など、自分がわかる名前を付けましょう。</p>
+<h2 id="削除する">削除する</h2>
+<p>不要な録音を消すには：</p>
+<ol>
+<li>削除したい録音を選ぶ</li>
+<li>削除をタップ</li>
+<li>確認ダイアログでOK</li>
+</ol>
+<p>一度削除した録音は復元できません。確認ダイアログが出るので、間違えて消す心配は少ないです。</p>
+<h2 id="分析画面へ">分析画面へ</h2>
+<p>一覧から録音を選ぶと、詳細な分析画面を開けます。</p>
+<ul>
+<li>ピッチグラフ</li>
+<li>スペクトログラム</li>
+<li>統計情報</li>
+</ul>
+<p><img src="/images/ja/04_analysis_idle.png" alt="分析画面"></p>
+<p>練習の振り返りに活用してください。</p>
+<h2 id="qa">Q&#x26;A</h2>
+<h3 id="録音は何件まで保存できる">録音は何件まで保存できる？</h3>
+<p>デバイスの容量次第です。1件あたりのデータ量は小さいので、数百件は問題なく保存できます。</p>
+<h3 id="録音をエクスポートしたい">録音をエクスポートしたい</h3>
+<p>現時点ではアプリ内保存のみです。将来のアップデートで対応する可能性があります。</p>
+<h3 id="録音が見つからない">録音が見つからない</h3>
+<p>フィルターが有効になっているかもしれません。すべてのフィルターを「すべて」に戻すと、全録音が表示されます。</p>
+<h3 id="アプリを消すとデータは">アプリを消すとデータは？</h3>
+<p>アプリを削除すると、録音データもすべて消えます。ご注意ください。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul>
+<li>録音一覧はホーム画面からアクセス</li>
+<li>再生コントロールですぐに聴ける</li>
+<li>並べ替えとフィルターで整理</li>
+<li>わかりやすい名前を付けると便利</li>
+<li>削除は確認付きで安心</li>
+<li>詳しい分析は分析画面で</li>
+</ul>
+<p>録音を整理しておくと、上達の過程が見えやすくなります。</p>
+<hr>
+<p>Vocalis Studio 開発者</p>  </div> <footer class="post-footer" data-astro-cid-gjtny2mx> <a href="/web/blog/ja/" data-astro-cid-gjtny2mx>← 記事一覧に戻る</a> </footer> </article>  </main> <footer class="footer" data-astro-cid-37fxchfa> <div class="footer-content" data-astro-cid-37fxchfa> <div class="footer-brand" data-astro-cid-37fxchfa> <span class="logo-icon small" data-astro-cid-37fxchfa>V</span> <span data-astro-cid-37fxchfa>Vocalis Studio</span> </div> <div class="footer-links" data-astro-cid-37fxchfa> <a href="/web/terms.html" data-astro-cid-37fxchfa>利用規約</a> <a href="/web/privacy.html" data-astro-cid-37fxchfa>プライバシーポリシー</a> <a href="/web/support.html" data-astro-cid-37fxchfa>サポート</a> </div> <div class="footer-social" data-astro-cid-37fxchfa> <a href="https://x.com/vocaborabo" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" data-astro-cid-37fxchfa> <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" data-astro-cid-37fxchfa><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" data-astro-cid-37fxchfa></path></svg> </a> <a href="https://instagram.com/vocalis_studio" target="_blank" rel="noopener noreferrer" aria-label="Instagram" data-astro-cid-37fxchfa> <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" data-astro-cid-37fxchfa><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" data-astro-cid-37fxchfa></path></svg> </a> </div> </div> <p class="copyright" data-astro-cid-37fxchfa>© 2025 Vocalis Studio. All rights reserved.</p> </footer> </body></html> 
