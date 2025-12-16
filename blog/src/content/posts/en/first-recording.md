@@ -1,7 +1,7 @@
 ---
 title: 'Your First Recording'
 description: 'Learn how to make your first voice recording with Vocalis Studio in just a few simple steps.'
-pubDate: 2025-12-16
+pubDate: 2025-12-16T12:00:00
 tags: ['Guide']
 ---
 

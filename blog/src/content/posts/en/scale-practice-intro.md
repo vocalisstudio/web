@@ -1,7 +1,7 @@
 ---
 title: 'Getting Started with Scale Practice'
 description: 'Learn how to use scale practice mode to train your pitch accuracy with guided reference tones.'
-pubDate: 2025-12-16
+pubDate: 2025-12-16T11:00:00
 tags: ['Guide']
 ---
 

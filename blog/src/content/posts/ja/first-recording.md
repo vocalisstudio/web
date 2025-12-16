@@ -1,7 +1,7 @@
 ---
 title: 'はじめての録音'
 description: 'Vocalis Studioで声を録音する方法を、ステップバイステップで紹介します。'
-pubDate: 2025-12-16
+pubDate: 2025-12-16T12:00:00
 tags: ['使い方']
 ---
 
