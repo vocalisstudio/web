@@ -28,6 +28,8 @@ Making your first recording takes just three steps:
 
 From the home screen, tap the "Start Recording" button. This takes you to the recording screen where you can configure your recording settings.
 
+![Home Screen](/images/en/01_home.png)
+
 ### Step 2: Configure Settings (Optional)
 
 For your first recording, I recommend keeping things simple:
@@ -36,6 +38,8 @@ For your first recording, I recommend keeping things simple:
 - **Other Settings**: You can leave these at their defaults for now
 
 The settings panel is on the left side in landscape mode, or can be toggled in portrait mode.
+
+![Recording Screen - Ready to Record](/images/en/02_recording_idle.png)
 
 ### Step 3: Start Recording
 
@@ -47,7 +51,11 @@ While recording, you will see:
 - **Audio level meter**: Shows your current volume
 - **Pitch detection**: Displays the detected pitch in real-time
 
+![Recording in Progress](/images/en/02_recording_in_progress.png)
+
 When you are finished, tap the stop button. Your recording is automatically saved.
+
+![Recording Complete](/images/en/02_recording_complete.png)
 
 ## What Happens After Recording
 
@@ -56,6 +64,8 @@ Once you stop recording, you have several options:
 - **Play Last Recording**: Listen to what you just recorded
 - **Go to Analysis**: View detailed pitch analysis and statistics
 - **Start New Recording**: Begin another recording session
+
+![Playback Mode](/images/en/02_recording_playback.png)
 
 The analysis screen provides valuable insights into your pitch accuracy and vocal characteristics.
 

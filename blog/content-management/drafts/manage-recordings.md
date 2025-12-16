@@ -31,6 +31,8 @@ From the home screen, tap "Recording List" to view all your saved recordings. Ea
 - Duration
 - Scale type used (if any)
 
+![Recording List](/images/en/03_recording_list_idle.png)
+
 ## Playback Controls
 
 The recording list includes playback controls for quick review:
@@ -42,6 +44,8 @@ The recording list includes playback controls for quick review:
 | Next | Go to the next recording |
 
 You can listen to recordings directly from the list without opening the full analysis screen.
+
+![Recording List with Playback](/images/en/03_recording_list_playback.png)
 
 ## Sorting Options
 
@@ -132,6 +136,8 @@ From any recording in the list, you can open the full analysis screen to see:
 - Pitch graph showing your performance over time
 - Spectrogram view of frequency content
 - Detailed statistics about accuracy and stability
+
+![Analysis Screen](/images/en/04_analysis_idle.png)
 
 The analysis screen provides deeper insights into each recording. See the pitch graph guide for more information about interpreting your analysis results.
 

@@ -77,6 +77,8 @@ You can also set:
 - **Descending Key Count**: How many keys to move down (0-24)
 - **Step Interval**: How many semitones per step (1-12)
 
+![Recording Screen with Scale Settings](/images/en/02_recording_idle.png)
+
 ## During Practice
 
 When you start recording with a scale:
@@ -84,6 +86,8 @@ When you start recording with a scale:
 1. **Chord introduction**: You hear a chord to establish the key
 2. **Scale playback**: Reference tones play one by one
 3. **Real-time feedback**: The app shows your pitch against the target
+
+![Scale Practice in Progress](/images/en/02_recording_in_progress.png)
 
 The indicator display shows:
 

@@ -30,6 +30,8 @@ draft: true
 - 長さ
 - 使用したスケール
 
+![録音一覧](/images/ja/03_recording_list_idle.png)
+
 ## 再生コントロール
 
 一覧画面から直接、録音を聴くことができます。
@@ -41,6 +43,8 @@ draft: true
 | 次へ | 次の録音へ |
 
 分析画面を開かなくても、さっと聴き返したいときに便利です。
+
+![録音一覧（再生中）](/images/ja/03_recording_list_playback.png)
 
 ## 並べ替え
 
@@ -126,6 +130,8 @@ draft: true
 - ピッチグラフ
 - スペクトログラム
 - 統計情報
+
+![分析画面](/images/ja/04_analysis_idle.png)
 
 練習の振り返りに活用してください。
 
