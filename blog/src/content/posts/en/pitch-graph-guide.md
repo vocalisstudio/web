@@ -59,13 +59,13 @@ Swipe horizontally to move forward or backward in time. Even with long recording
 
 While playback is paused, swipe vertically to move the displayed pitch range up or down.
 
-### Zooming
-
-Pinch in or out to zoom the time axis. Zoom in to see fine details, zoom out to see the overall flow.
+The swipe direction is automatically detected, so even diagonal movements will scroll in the intended direction.
 
 ### Auto-Follow Mode
 
-During playback, the graph automatically scrolls to follow the current position. You can watch without needing to manually navigate.
+During scale recording playback, the graph automatically follows the currently playing scale note position. You can toggle this on/off using the button within the graph.
+
+This feature is only visible during playback.
 
 ![Analysis Screen During Playback](/web/blog/images/en/04_analysis_playback.png)
 
@@ -87,7 +87,7 @@ The analysis screen also has a "Spectrogram" tab. Use the pitch graph for pitch 
 
 - The pitch graph shows how pitch changes over time
 - Compare with target lines to assess accuracy
-- Swipe to move, pinch to zoom
+- Swipe to navigate through time and pitch range
 - Start by observing overall trends
 
 Next time, we'll cover the basics of the spectrogram.
