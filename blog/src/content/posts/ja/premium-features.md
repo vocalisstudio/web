@@ -38,6 +38,8 @@ tags: ['Tips', 'Premium']
 
 録音後にピッチの推移をグラフで確認できます。
 
+![ピッチグラフ](/images/ja/04_pitch_graph_fullscreen.png)
+
 - 時間軸に沿ったピッチ変化を可視化
 - 目標のスケール音との比較
 - どこで音程が外れたかを特定
@@ -57,6 +59,8 @@ tags: ['Tips', 'Premium']
 ### 詳細な統計情報
 
 録音の分析結果を数値で確認できます。
+
+![統計情報](/images/ja/05_statistics_pitch.png)
 
 **ピッチ分析**:
 - 全体の正確度（%）

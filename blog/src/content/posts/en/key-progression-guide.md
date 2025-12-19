@@ -9,6 +9,8 @@ tags: ['Tips', 'Scales']
 
 Key progression automatically changes the key (pitch) after each scale, continuing to the next scale.
 
+![Recording screen key progression settings](/images/en/02_recording_idle.png)
+
 For example, starting from C4 and going up by half steps: C4 → C#4 → D4 → D#4...
 
 This lets you efficiently practice multiple keys in a single recording session.

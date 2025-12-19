@@ -11,6 +11,8 @@ Manually configuring the same scale settings every time is tedious.
 
 With presets, you can save your favorite settings and recall them with a single tap.
 
+![Recording screen settings panel](/images/en/02_recording_idle.png)
+
 ## What Gets Saved in a Preset
 
 Presets store all of these settings:

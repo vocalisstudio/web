@@ -9,6 +9,8 @@ tags: ['Tips', 'Scales']
 
 Vocalis Studio offers 9 different scale patterns designed for various practice goals.
 
+![Recording screen scale settings](/images/en/02_recording_idle.png)
+
 Let's explore each pattern's characteristics and ideal use cases.
 
 ## Basic Scales

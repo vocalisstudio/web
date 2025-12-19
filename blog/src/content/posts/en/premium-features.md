@@ -38,6 +38,8 @@ Practice with longer scale patterns and extensive key progressions without restr
 
 View your pitch trajectory as a graph after recording.
 
+![Pitch Graph](/images/en/04_pitch_graph_fullscreen.png)
+
 - Visualize pitch changes over time
 - Compare against target scale notes
 - Identify exactly where you went off-pitch
@@ -57,6 +59,8 @@ Learn more: "[Spectrogram Basics](/en/posts/spectrogram-basics/)"
 ### Detailed Statistics
 
 View your recording analysis as concrete numbers.
+
+![Statistics](/images/en/05_statistics_pitch.png)
 
 **Pitch Analysis**:
 - Overall accuracy (%)
