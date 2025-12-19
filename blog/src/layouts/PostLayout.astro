@@ -1,0 +1,246 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import type { Language } from '../content/config';
+import { defaultLang } from '../content/config';
+import BaseLayout from './BaseLayout.astro';
+import { useTranslations } from '../i18n/ui';
+import { formatDate, getSlugWithoutLang } from '../i18n/utils';
+
+interface Props {
+  post: CollectionEntry<'posts'>;
+  lang?: Language;
+}
+
+const { post, lang = defaultLang } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, tags } = post.data;
+const t = useTranslations(lang);
+const basePath = import.meta.env.BASE_URL || '/web/blog';
+const slug = getSlugWithoutLang(post.slug);
+
+const formattedDate = formatDate(pubDate, lang);
+const formattedUpdatedDate = updatedDate ? formatDate(updatedDate, lang) : null;
+---
+
+<BaseLayout title={title} description={description} ogImage={heroImage} lang={lang} slug={slug}>
+  <article class="post">
+    <header class="post-header">
+      <time datetime={pubDate.toISOString()}>{formattedDate}</time>
+      {updatedDate && (
+        <span class="updated">
+          {lang === 'ja' ? `（更新: ${formattedUpdatedDate}）` : `(Updated: ${formattedUpdatedDate})`}
+        </span>
+      )}
+      <h1>{title}</h1>
+      {tags.length > 0 && (
+        <div class="tags">
+          {tags.map((tag) => (
+            <span class="tag">{tag}</span>
+          ))}
+        </div>
+      )}
+    </header>
+    {heroImage && (
+      <img class="hero-image" src={heroImage} alt="" />
+    )}
+    <div class="content">
+      <slot />
+    </div>
+    <footer class="post-footer">
+      <a href={`${basePath}/${lang}/`}>{t('nav.back')}</a>
+    </footer>
+  </article>
+</BaseLayout>
+
+<style>
+  .post {
+    background: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  @media (max-width: 640px) {
+    .post {
+      padding: 1.5rem;
+      border-radius: var(--radius-md);
+    }
+  }
+
+  .post-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .post-header time {
+    color: var(--color-text-muted);
+    font-size: 0.8125rem;
+    font-family: var(--font-mono);
+  }
+
+  .updated {
+    color: var(--color-text-muted);
+    font-size: 0.8125rem;
+    margin-left: 0.5rem;
+  }
+
+  .post-header h1 {
+    margin-top: 0.75rem;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--color-text);
+    letter-spacing: -0.01em;
+  }
+
+  @media (min-width: 640px) {
+    .post-header h1 {
+      font-size: 2rem;
+    }
+  }
+
+  .tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    background: var(--color-bg-secondary);
+    color: var(--color-text-light);
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+
+  .hero-image {
+    width: 100%;
+    border-radius: var(--radius-md);
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .content {
+    margin-bottom: 3rem;
+  }
+
+  /* 記事本文のスタイル */
+  .content :global(h2) {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.375rem;
+    font-weight: 600;
+    color: var(--color-text);
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .content :global(h3) {
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+
+  .content :global(p) {
+    margin-bottom: 1.25rem;
+    line-height: 1.8;
+  }
+
+  .content :global(ul),
+  .content :global(ol) {
+    margin-bottom: 1.25rem;
+    padding-left: 1.5rem;
+  }
+
+  .content :global(li) {
+    margin-bottom: 0.5rem;
+    line-height: 1.7;
+  }
+
+  .content :global(blockquote) {
+    border-left: 3px solid var(--color-primary);
+    padding-left: 1.25rem;
+    margin: 1.5rem 0;
+    color: var(--color-text-light);
+    font-style: normal;
+    background: var(--color-bg-tertiary);
+    padding: 1rem 1.25rem;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  }
+
+  .content :global(code) {
+    font-family: var(--font-mono);
+    font-size: 0.875em;
+    background: var(--color-bg-tertiary);
+    padding: 0.2em 0.5em;
+    border-radius: var(--radius-sm);
+    color: var(--color-text);
+  }
+
+  .content :global(pre) {
+    padding: 1.25rem;
+    border-radius: var(--radius-md);
+    overflow-x: auto;
+    background: #1e2a3a;
+    margin: 1.5rem 0;
+  }
+
+  .content :global(pre code) {
+    background: none;
+    padding: 0;
+    color: #e2e8f0;
+    font-size: 0.875rem;
+  }
+
+  .content :global(a) {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-decoration-color: var(--color-primary);
+    text-underline-offset: 2px;
+    transition: color 0.2s ease;
+  }
+
+  .content :global(a:hover) {
+    color: var(--color-accent);
+    text-decoration-color: var(--color-accent);
+  }
+
+  .content :global(img) {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius-md);
+    margin: 1.5rem 0;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .content :global(hr) {
+    border: none;
+    border-top: 1px solid var(--color-border-light);
+    margin: 2.5rem 0;
+  }
+
+  .post-footer {
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border-light);
+  }
+
+  .post-footer a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-primary);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+
+  .post-footer a:hover {
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+</style>

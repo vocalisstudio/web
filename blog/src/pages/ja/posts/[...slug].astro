@@ -1,0 +1,21 @@
+---
+import { getCollection } from 'astro:content';
+import PostLayout from '../../../layouts/PostLayout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts', ({ data, slug }) =>
+    !data.draft && slug.startsWith('ja/')
+  );
+  return posts.map((post) => ({
+    params: { slug: post.slug.replace(/^ja\//, '') },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<PostLayout post={post} lang="ja">
+  <Content />
+</PostLayout>

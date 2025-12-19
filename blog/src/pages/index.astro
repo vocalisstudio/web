@@ -1,0 +1,28 @@
+---
+import { defaultLang } from '../content/config';
+
+const basePath = import.meta.env.BASE_URL || '/web/blog';
+const defaultRedirect = `${basePath}/${defaultLang}/`;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting... | Vocalis Studio Blog</title>
+    <link rel="canonical" href={defaultRedirect} />
+    <meta http-equiv="refresh" content={`0;url=${defaultRedirect}`} />
+    <script is:inline define:vars={{ basePath }}>
+      (function() {
+        const lang = navigator.language || navigator.userLanguage || 'en';
+        const isJapanese = lang.startsWith('ja');
+        const targetLang = isJapanese ? 'ja' : 'en';
+        window.location.replace(basePath + '/' + targetLang + '/');
+      })();
+    </script>
+  </head>
+  <body>
+    <p>Redirecting to <a href={defaultRedirect}>Vocalis Studio Blog</a>...</p>
+  </body>
+</html>

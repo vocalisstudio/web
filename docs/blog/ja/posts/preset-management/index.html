@@ -1,0 +1,145 @@
+<!DOCTYPE html><html lang="ja" class="scroll-smooth" data-astro-cid-37fxchfa> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/png" sizes="32x32" href="/web/images/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/web/images/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/web/images/apple-touch-icon.png"><meta name="generator" content="Astro v5.16.5"><title>プリセットで練習を効率化 | Vocalis Studio ブログ</title><meta name="description" content="よく使うスケール設定をプリセットとして保存・管理する方法を解説します。"><link rel="canonical" href="https://vocalisstudio.github.io/web/blog/ja/posts/preset-management/"><link rel="alternate" hreflang="en" href="https://vocalisstudio.github.io/web/blog/en/posts/preset-management/"><link rel="alternate" hreflang="ja" href="https://vocalisstudio.github.io/web/blog/ja/posts/preset-management/"><link rel="alternate" hreflang="x-default" href="https://vocalisstudio.github.io/web/blog/en/"><meta property="og:type" content="article"><meta property="og:url" content="https://vocalisstudio.github.io/web/blog/ja/posts/preset-management/"><meta property="og:title" content="プリセットで練習を効率化 | Vocalis Studio ブログ"><meta property="og:description" content="よく使うスケール設定をプリセットとして保存・管理する方法を解説します。"><meta property="og:site_name" content="Vocalis Studio ブログ"><meta property="og:locale" content="ja_JP"><meta property="og:locale:alternate" content="en_US"><meta name="twitter:card" content="summary_large_image"><link rel="alternate" type="application/rss+xml" title="Vocalis Studio ブログ RSS (JA)" href="/web/blog/rss-ja.xml"><link rel="stylesheet" href="/web/blog/_astro/_slug_.DgFEegL3.css">
+<style>.post[data-astro-cid-gjtny2mx]{background:#fff;border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);padding:2.5rem;margin-bottom:2rem}@media(max-width:640px){.post[data-astro-cid-gjtny2mx]{padding:1.5rem;border-radius:var(--radius-md)}}.post-header[data-astro-cid-gjtny2mx]{margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--color-border-light)}.post-header[data-astro-cid-gjtny2mx] time[data-astro-cid-gjtny2mx]{color:var(--color-text-muted);font-size:.8125rem;font-family:var(--font-mono)}.updated[data-astro-cid-gjtny2mx]{color:var(--color-text-muted);font-size:.8125rem;margin-left:.5rem}.post-header[data-astro-cid-gjtny2mx] h1[data-astro-cid-gjtny2mx]{margin-top:.75rem;margin-bottom:1rem;font-size:1.75rem;font-weight:600;line-height:1.4;color:var(--color-text);letter-spacing:-.01em}@media(min-width:640px){.post-header[data-astro-cid-gjtny2mx] h1[data-astro-cid-gjtny2mx]{font-size:2rem}}.tags[data-astro-cid-gjtny2mx]{display:flex;gap:.5rem;flex-wrap:wrap}.tag[data-astro-cid-gjtny2mx]{background:var(--color-bg-secondary);color:var(--color-text-light);padding:.25rem .75rem;border-radius:var(--radius-sm);font-size:.75rem;font-weight:500}.hero-image[data-astro-cid-gjtny2mx]{width:100%;border-radius:var(--radius-md);margin-bottom:2rem;box-shadow:var(--shadow-sm)}.content[data-astro-cid-gjtny2mx]{margin-bottom:3rem}.content[data-astro-cid-gjtny2mx] h2{margin-top:2.5rem;margin-bottom:1rem;font-size:1.375rem;font-weight:600;color:var(--color-text);padding-bottom:.5rem;border-bottom:1px solid var(--color-border-light)}.content[data-astro-cid-gjtny2mx] h3{margin-top:2rem;margin-bottom:.75rem;font-size:1.125rem;font-weight:600;color:var(--color-text)}.content[data-astro-cid-gjtny2mx] p{margin-bottom:1.25rem;line-height:1.8}.content[data-astro-cid-gjtny2mx] ul,.content[data-astro-cid-gjtny2mx] ol{margin-bottom:1.25rem;padding-left:1.5rem}.content[data-astro-cid-gjtny2mx] li{margin-bottom:.5rem;line-height:1.7}.content[data-astro-cid-gjtny2mx] blockquote{border-left:3px solid var(--color-primary);padding-left:1.25rem;margin:1.5rem 0;color:var(--color-text-light);font-style:normal;background:var(--color-bg-tertiary);padding:1rem 1.25rem;border-radius:0 var(--radius-sm) var(--radius-sm) 0}.content[data-astro-cid-gjtny2mx] code{font-family:var(--font-mono);font-size:.875em;background:var(--color-bg-tertiary);padding:.2em .5em;border-radius:var(--radius-sm);color:var(--color-text)}.content[data-astro-cid-gjtny2mx] pre{padding:1.25rem;border-radius:var(--radius-md);overflow-x:auto;background:#1e2a3a;margin:1.5rem 0}.content[data-astro-cid-gjtny2mx] pre code{background:none;padding:0;color:#e2e8f0;font-size:.875rem}.content[data-astro-cid-gjtny2mx] a{color:var(--color-primary);text-decoration:underline;text-decoration-color:var(--color-primary);text-underline-offset:2px;transition:color .2s ease}.content[data-astro-cid-gjtny2mx] a:hover{color:var(--color-accent);text-decoration-color:var(--color-accent)}.content[data-astro-cid-gjtny2mx] img{max-width:100%;height:auto;border-radius:var(--radius-md);margin:1.5rem 0;box-shadow:var(--shadow-sm)}.content[data-astro-cid-gjtny2mx] hr{border:none;border-top:1px solid var(--color-border-light);margin:2.5rem 0}.post-footer[data-astro-cid-gjtny2mx]{padding-top:1.5rem;border-top:1px solid var(--color-border-light)}.post-footer[data-astro-cid-gjtny2mx] a[data-astro-cid-gjtny2mx]{display:inline-flex;align-items:center;gap:.5rem;color:var(--color-primary);font-size:.9375rem;font-weight:500;transition:color .2s ease}.post-footer[data-astro-cid-gjtny2mx] a[data-astro-cid-gjtny2mx]:hover{color:var(--color-accent);text-decoration:none}
+</style></head> <body data-astro-cid-37fxchfa> <header class="header" data-astro-cid-37fxchfa> <nav class="nav" data-astro-cid-37fxchfa> <a href="/web/blog/ja/" class="logo" data-astro-cid-37fxchfa> <span class="logo-icon" data-astro-cid-37fxchfa>V</span> <span class="logo-text" data-astro-cid-37fxchfa>Vocalis Studio Blog</span> </a> <div class="nav-links" data-astro-cid-37fxchfa> <a href="/web/blog/ja/" data-astro-cid-37fxchfa>記事一覧</a> <a href="/web/" data-astro-cid-37fxchfa>製品ページ</a> <a href="/web/blog/rss-ja.xml" class="rss-link" title="RSS" data-astro-cid-37fxchfa> <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" data-astro-cid-37fxchfa> <path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1Z" data-astro-cid-37fxchfa></path> </svg> </a> </div> </nav> </header> <main class="main" data-astro-cid-37fxchfa>  <article class="post" data-astro-cid-gjtny2mx> <header class="post-header" data-astro-cid-gjtny2mx> <time datetime="2025-12-19T08:00:00.000Z" data-astro-cid-gjtny2mx>2025年12月19日</time>  <h1 data-astro-cid-gjtny2mx>プリセットで練習を効率化</h1> <div class="tags" data-astro-cid-gjtny2mx> <span class="tag" data-astro-cid-gjtny2mx>Tips</span><span class="tag" data-astro-cid-gjtny2mx>設定</span> </div> </header>  <div class="content" data-astro-cid-gjtny2mx>  <h2 id="プリセットとは">プリセットとは</h2>
+<p>毎回同じスケール設定を手動で行うのは面倒です。</p>
+<p>プリセット機能を使えば、よく使う設定を保存して、ワンタップで呼び出せます。</p>
+<p><img src="/images/ja/02_recording_idle.png" alt="録音画面の設定パネル"></p>
+<h2 id="プリセットに保存される設定">プリセットに保存される設定</h2>
+<p>プリセットには以下の設定がすべて保存されます。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>設定項目</th><th>例</th></tr></thead><tbody><tr><td>スケールタイプ</td><td>Five Tone、Rossini Scale など</td></tr><tr><td>開始ピッチ</td><td>C4、G3 など</td></tr><tr><td>テンポ</td><td>1.0秒、1.5秒 など</td></tr><tr><td>キー進行パターン</td><td>上昇→下降、上昇のみ など</td></tr><tr><td>上昇回数</td><td>3回、5回 など</td></tr><tr><td>下降回数</td><td>0回、2回 など</td></tr><tr><td>上昇ステップ</td><td>1半音、2半音 など</td></tr><tr><td>下降ステップ</td><td>1半音、2半音 など</td></tr></tbody></table>
+<h2 id="プリセットの保存方法">プリセットの保存方法</h2>
+<ol>
+<li>録音画面で、保存したい設定を行う</li>
+<li>設定パネルの「プリセット保存」ボタンをタップ</li>
+<li>プリセット名を入力して保存</li>
+</ol>
+<p>わかりやすい名前をつけることで、後から見つけやすくなります。</p>
+<h2 id="プリセットの呼び出し">プリセットの呼び出し</h2>
+<ol>
+<li>録音画面の設定パネルで「プリセット」をタップ</li>
+<li>一覧から使いたいプリセットを選択</li>
+<li>設定が自動的に反映される</li>
+</ol>
+<h2 id="プリセット一覧画面の機能">プリセット一覧画面の機能</h2>
+<h3 id="ソート機能">ソート機能</h3>
+<p>プリセットは3つの基準で並べ替えできます。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>ソート</th><th>説明</th></tr></thead><tbody><tr><td>更新日時順</td><td>最近使ったものが上に（デフォルト）</td></tr><tr><td>名前順</td><td>アルファベット・あいうえお順</td></tr><tr><td>ピッチ順</td><td>開始ピッチの低い順</td></tr></tbody></table>
+<h3 id="編集削除">編集・削除</h3>
+<p>プリセット一覧から、各プリセットを編集または削除できます。</p>
+<h2 id="おすすめのプリセット例">おすすめのプリセット例</h2>
+<h3 id="ウォームアップ用">ウォームアップ用</h3>
+<ul>
+<li><strong>名前</strong>: 「朝のウォームアップ」</li>
+<li><strong>スケール</strong>: Five Tone</li>
+<li><strong>開始ピッチ</strong>: 自分が楽に出せる低めの音（例: C3）</li>
+<li><strong>キー進行</strong>: 上昇→下降</li>
+<li><strong>上昇回数</strong>: 3回</li>
+</ul>
+<h3 id="高音チャレンジ用">高音チャレンジ用</h3>
+<ul>
+<li><strong>名前</strong>: 「高音トレーニング」</li>
+<li><strong>スケール</strong>: Octave Repeat</li>
+<li><strong>開始ピッチ</strong>: 中程度の音（例: E3）</li>
+<li><strong>キー進行</strong>: 上昇のみ</li>
+<li><strong>上昇回数</strong>: 5〜6回</li>
+</ul>
+<h3 id="低音開発用">低音開発用</h3>
+<ul>
+<li><strong>名前</strong>: 「低音エクササイズ」</li>
+<li><strong>スケール</strong>: Five Tone Down</li>
+<li><strong>開始ピッチ</strong>: 中程度の音（例: G3）</li>
+<li><strong>キー進行</strong>: 下降のみ</li>
+<li><strong>下降回数</strong>: 4回</li>
+</ul>
+<h3 id="上級者向け">上級者向け</h3>
+<ul>
+<li><strong>名前</strong>: 「フルレンジ練習」</li>
+<li><strong>スケール</strong>: Rossini Scale</li>
+<li><strong>開始ピッチ</strong>: 低めの音（例: C3）</li>
+<li><strong>キー進行</strong>: 上昇のみ</li>
+<li><strong>上昇回数</strong>: 6〜8回</li>
+</ul>
+<h2 id="プリセット活用のヒント">プリセット活用のヒント</h2>
+<h3 id="練習メニュー化">練習メニュー化</h3>
+<p>複数のプリセットを順番に使うことで、練習メニューが作れます。</p>
+<ol>
+<li>「朝のウォームアップ」で声を温める</li>
+<li>「高音トレーニング」で上の音域を開発</li>
+<li>「低音エクササイズ」で下の音域もケア</li>
+</ol>
+<h3 id="日々の記録と調整">日々の記録と調整</h3>
+<p>「今日は高音が出にくかった」と感じたら、上昇回数を減らした新しいプリセットを作成。体調や成長に合わせて調整しましょう。</p>
+<h3 id="名前で目的を明確に">名前で目的を明確に</h3>
+<p>「C3スタート」より「朝練・軽めウォーム」のように、目的がわかる名前がおすすめです。</p>
+<h2 id="まとめ">まとめ</h2>
+<ul>
+<li>プリセットで毎回の設定作業を省略</li>
+<li>スケール、ピッチ、キー進行などすべてが保存される</li>
+<li>目的別にプリセットを作成して練習効率アップ</li>
+<li>わかりやすい名前をつけて管理しやすく</li>
+<li>複数のプリセットを組み合わせて練習メニュー化</li>
+</ul>
+<hr>
+<p>Vocalis Studio 開発者</p>  </div> <footer class="post-footer" data-astro-cid-gjtny2mx> <a href="/web/blog/ja/" data-astro-cid-gjtny2mx>← 記事一覧に戻る</a> </footer> </article>  </main> <footer class="footer" data-astro-cid-37fxchfa> <div class="footer-content" data-astro-cid-37fxchfa> <div class="footer-brand" data-astro-cid-37fxchfa> <span class="logo-icon small" data-astro-cid-37fxchfa>V</span> <span data-astro-cid-37fxchfa>Vocalis Studio</span> </div> <div class="footer-links" data-astro-cid-37fxchfa> <a href="/web/terms.html" data-astro-cid-37fxchfa>利用規約</a> <a href="/web/privacy.html" data-astro-cid-37fxchfa>プライバシーポリシー</a> <a href="/web/support.html" data-astro-cid-37fxchfa>サポート</a> </div> <div class="footer-social" data-astro-cid-37fxchfa> <a href="https://x.com/vocaborabo" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" data-astro-cid-37fxchfa> <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" data-astro-cid-37fxchfa><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" data-astro-cid-37fxchfa></path></svg> </a> <a href="https://instagram.com/vocalis_studio" target="_blank" rel="noopener noreferrer" aria-label="Instagram" data-astro-cid-37fxchfa> <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" data-astro-cid-37fxchfa><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" data-astro-cid-37fxchfa></path></svg> </a> </div> </div> <p class="copyright" data-astro-cid-37fxchfa>© 2025 Vocalis Studio. All rights reserved.</p> </footer> </body></html> 

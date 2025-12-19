@@ -1,0 +1,66 @@
+---
+import type { Language } from '../content/config';
+import { useTranslations } from '../i18n/ui';
+import { getAlternateLanguage } from '../i18n/utils';
+
+interface Props {
+  lang: Language;
+  slug?: string;
+}
+
+const { lang, slug } = Astro.props;
+const t = useTranslations(lang);
+const alternateLang = getAlternateLanguage(lang);
+
+const basePath = import.meta.env.BASE_URL || '/web/blog';
+const currentPath = slug ? `/${lang}/posts/${slug}/` : `/${lang}/`;
+const alternatePath = slug ? `/${alternateLang}/posts/${slug}/` : `/${alternateLang}/`;
+---
+
+<nav class="lang-switch" aria-label={t('lang.switch')}>
+  <a
+    href={`${basePath}${currentPath}`}
+    class:list={['lang-link', { active: true }]}
+    aria-current="page"
+  >
+    {t(`lang.${lang}` as const)}
+  </a>
+  <span class="separator">/</span>
+  <a
+    href={`${basePath}${alternatePath}`}
+    class="lang-link"
+    hreflang={alternateLang}
+  >
+    {t(`lang.${alternateLang}` as const)}
+  </a>
+</nav>
+
+<style>
+  .lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+  }
+
+  .lang-link {
+    color: var(--color-text-muted);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    text-decoration: none;
+  }
+
+  .lang-link:hover {
+    color: var(--color-primary);
+  }
+
+  .lang-link.active {
+    color: var(--color-text);
+    font-weight: 600;
+  }
+
+  .separator {
+    color: var(--color-text-muted);
+    font-size: 0.75rem;
+  }
+</style>
