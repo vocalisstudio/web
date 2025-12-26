@@ -57,7 +57,7 @@
 | 録音一覧表示 | ✅ | `manage-recordings.md` | |
 | 検索機能 | ✅ | `manage-recordings.md` | |
 | ソートオプション（6種） | ✅ | `manage-recordings.md` | |
-| フィルター機能 | ❌ | - | **未記事化**（詳細解説なし） |
+| フィルター機能 | ✅ | `manage-recordings.md` | 日付/スケール/ピッチ/テンポ/検索 |
 | 録音リネーム | ✅ | `manage-recordings.md` | |
 | 録音削除 | ✅ | `manage-recordings.md` | |
 | 再生コントロール | ✅ | `manage-recordings.md` | |
@@ -81,8 +81,8 @@
 |------|:------:|----------|------|
 | ピッチグラフ可視化 | ✅ | `pitch-graph-guide.md` | |
 | ターゲットスケール表示 | ✅ | `pitch-graph-guide.md` | |
-| スワイプ操作（水平/垂直） | ❌ | - | **未記事化** |
-| オートフォローモード | ❌ | - | **未記事化（v1.6.0新機能）** |
+| スワイプ操作（水平/垂直） | ✅ | `pitch-graph-guide.md` | 時間軸・音程軸の移動 |
+| オートフォローモード | ✅ | `pitch-graph-guide.md` | 自動追従モードとして記載 |
 | スペクトログラム表示 | ✅ | `spectrogram-basics.md` | |
 | 再生コントロール | ❌ | - | 分析画面での操作は未記事化 |
 
@@ -102,9 +102,9 @@
 | インターバル正確度 | ✅ | `statistics-guide.md` | |
 | ビブラート速度・深さ | ✅ | `vibrato-analysis.md` | 専用記事あり |
 | ビブラート規則性 | ✅ | `vibrato-analysis.md` | |
-| Singer's Formant | ❌ | - | **未記事化（v1.3.0）** |
-| Brightness（4-6kHz） | ❌ | - | **未記事化（v1.3.0）** |
-| Airiness（6-9kHz） | ❌ | - | **未記事化（v1.3.0）** |
+| Singer's Formant | ✅ | `spectrum-analysis-guide.md` | 専用記事あり |
+| Brightness（4-6kHz） | ✅ | `spectrum-analysis-guide.md` | 専用記事あり |
+| Airiness（6-9kHz） | ✅ | `spectrum-analysis-guide.md` | 専用記事あり |
 
 ---
 
@@ -148,31 +148,30 @@
 
 ## 📋 未記事化機能サマリー
 
-### 🔴 高優先度（アプリ機能の核心部分）
+### ✅ 対応済み（2025-12-26）
 
-| # | 機能 | 提案ファイル名 | 理由 |
-|---|------|----------------|------|
-| 1 | Singer's Formant分析 | `singers-formant-guide.md` | v1.3.0の目玉機能、プロ向け指標 |
-| 2 | Brightness/Airiness分析 | `spectrum-analysis-guide.md` | スペクトル分析の重要指標 |
-| 3 | オートフォローモード | `pitch-graph-guide.md` に追記 | v1.6.0の操作性向上機能 |
-| 4 | フィルター機能詳細 | `manage-recordings.md` に追記 | 録音管理の効率化 |
+| # | 機能 | 対応記事 | 状態 |
+|---|------|----------|------|
+| 1 | Singer's Formant/Brightness/Airiness | `spectrum-analysis-guide.md` | **新規作成** |
+| 2 | オートフォローモード | `pitch-graph-guide.md` | 既存記事に記載あり |
+| 3 | フィルター機能詳細 | `manage-recordings.md` | 既存記事に記載あり |
+| 4 | スワイプ操作 | `pitch-graph-guide.md` | 既存記事に記載あり |
 
 ### 🟡 中優先度（設定・操作の詳細解説）
 
 | # | 機能 | 提案ファイル名 | 理由 |
 |---|------|----------------|------|
-| 5 | 信頼度閾値の調整 | `advanced-settings-guide.md` | ピッチ検出精度に影響 |
-| 6 | 分析画面のスワイプ操作 | `analysis-navigation-guide.md` | ユーザー操作性向上 |
-| 7 | 経過時間表示（v1.6.2） | `update-v162.md` | 最新機能のアップデート記事 |
-| 8 | オーディオレベルメーター | `recording-tips.md` に追記 | 録音品質に関わる |
+| 1 | 信頼度閾値の調整 | `advanced-settings-guide.md` | ピッチ検出精度に影響 |
+| 2 | 経過時間表示（v1.6.2） | `update-v162.md` | 最新機能のアップデート記事 |
+| 3 | オーディオレベルメーター | `recording-tips.md` に追記 | 録音品質に関わる |
 
 ### 🟢 低優先度（補足的コンテンツ）
 
 | # | 機能 | 提案ファイル名 | 理由 |
 |---|------|----------------|------|
-| 9 | 購入・復元方法 | `subscription-faq.md` | サポート的記事 |
-| 10 | 言語設定 | 不要（簡単な操作） | - |
-| 11 | 低音域トレーニング | `low-range-training.md` | 教育コンテンツ拡充 |
+| 1 | 購入・復元方法 | `subscription-faq.md` | サポート的記事 |
+| 2 | 低音域トレーニング | `low-range-training.md` | 教育コンテンツ拡充 |
+| 3 | 呼吸法・ウォームアップ | `breathing-warmup-guide.md` | 練習前準備 |
 
 ---
 
