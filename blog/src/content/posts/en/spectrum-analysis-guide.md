@@ -85,6 +85,8 @@ Whisper singing or breathy delivery increases this value.
 
 After playing a recording, open the statistics screen to find the "Spectrum Analysis" section with all three metrics.
 
+![Spectrum Analysis section in Statistics](/images/en/05_statistics_spectrum.png)
+
 ### Understanding the Values
 
 Each metric shows relative strength, averaged across your entire recording. This reveals overall tendencies rather than momentary changes.
